@@ -1,0 +1,10 @@
+{
+  "n": 1197,
+  "n_companies": 29,
+  "market_adjusted": true,
+  "mcar_1d_mean": 0.407,
+  "mcar_1d_tstat": 5.19,
+  "pos_vs_neg_pval": 0.0194,
+  "best_ml_r2": 0.1335,
+  "sentiment_corr": 0.0716
+}

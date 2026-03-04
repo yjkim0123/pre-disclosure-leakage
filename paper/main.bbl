@@ -1,0 +1,119 @@
+\begin{thebibliography}{14}
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+\providecommand{\url}[1]{\texttt{#1}}
+\providecommand{\href}[2]{#2}
+\providecommand{\path}[1]{#1}
+\providecommand{\DOIprefix}{doi:}
+\providecommand{\ArXivprefix}{arXiv:}
+\providecommand{\URLprefix}{URL: }
+\providecommand{\Pubmedprefix}{pmid:}
+\providecommand{\doi}[1]{\href{http://dx.doi.org/#1}{\path{#1}}}
+\providecommand{\Pubmed}[1]{\href{pmid:#1}{\path{#1}}}
+\providecommand{\bibinfo}[2]{#2}
+\ifx\xfnm\relax \def\xfnm[#1]{\unskip,\space#1}\fi
+%Type = Article
+\bibitem[{Ahmed and Schneible(2007)}]{ahmed2003impact}
+\bibinfo{author}{Ahmed, A.S.}, \bibinfo{author}{Schneible, R.A.},
+  \bibinfo{year}{2007}.
+\newblock \bibinfo{title}{The impact of {Regulation Fair Disclosure} on
+  investors' prior information quality---evidence from an analysis of changes
+  in trading volume and stock price reactions to earnings announcements}.
+\newblock \bibinfo{journal}{Journal of Corporate Finance} \bibinfo{volume}{13},
+  \bibinfo{pages}{282--299}.
+%Type = Article
+\bibitem[{Ball and Brown(1968)}]{ball1968empirical}
+\bibinfo{author}{Ball, R.}, \bibinfo{author}{Brown, P.}, \bibinfo{year}{1968}.
+\newblock \bibinfo{title}{An empirical evaluation of accounting income
+  numbers}.
+\newblock \bibinfo{journal}{Journal of Accounting Research}
+  \bibinfo{volume}{6}, \bibinfo{pages}{159--178}.
+%Type = Article
+\bibitem[{Bernile et~al.(2016)Bernile, Hu and Tang}]{bernile2016can}
+\bibinfo{author}{Bernile, G.}, \bibinfo{author}{Hu, J.}, \bibinfo{author}{Tang,
+  Y.}, \bibinfo{year}{2016}.
+\newblock \bibinfo{title}{Can information be locked up? {Informed} trading
+  ahead of macro-news announcements}.
+\newblock \bibinfo{journal}{Journal of Financial Economics}
+  \bibinfo{volume}{121}, \bibinfo{pages}{496--520}.
+%Type = Article
+\bibitem[{Chae(2005)}]{chae2005trading}
+\bibinfo{author}{Chae, J.}, \bibinfo{year}{2005}.
+\newblock \bibinfo{title}{Trading volume, information asymmetry, and timing
+  information}.
+\newblock \bibinfo{journal}{The Journal of Finance} \bibinfo{volume}{60},
+  \bibinfo{pages}{413--442}.
+%Type = Article
+\bibitem[{Collin-Dufresne and Fos(2015)}]{collin2007volatility}
+\bibinfo{author}{Collin-Dufresne, P.}, \bibinfo{author}{Fos, V.},
+  \bibinfo{year}{2015}.
+\newblock \bibinfo{title}{Volatility and informed trading}.
+\newblock \bibinfo{journal}{The Journal of Finance} \bibinfo{volume}{70},
+  \bibinfo{pages}{1709--1749}.
+%Type = Article
+\bibitem[{Fama et~al.(1969)Fama, Fisher, Jensen and Roll}]{fama1969adjustment}
+\bibinfo{author}{Fama, E.F.}, \bibinfo{author}{Fisher, L.},
+  \bibinfo{author}{Jensen, M.C.}, \bibinfo{author}{Roll, R.},
+  \bibinfo{year}{1969}.
+\newblock \bibinfo{title}{The adjustment of stock prices to new information}.
+\newblock \bibinfo{journal}{International Economic Review}
+  \bibinfo{volume}{10}, \bibinfo{pages}{1--21}.
+%Type = Article
+\bibitem[{Heflin et~al.(2003)Heflin, Subramanyam and
+  Zhang}]{heflin2003regulation}
+\bibinfo{author}{Heflin, F.}, \bibinfo{author}{Subramanyam, K.},
+  \bibinfo{author}{Zhang, Y.}, \bibinfo{year}{2003}.
+\newblock \bibinfo{title}{The effect of {Regulation FD} on the properties of
+  analysts' forecasts}.
+\newblock \bibinfo{journal}{Journal of Accounting and Economics}
+  \bibinfo{volume}{35}, \bibinfo{pages}{61--89}.
+%Type = Article
+\bibitem[{Jang and Kang(2007)}]{jang2007fair}
+\bibinfo{author}{Jang, H.S.}, \bibinfo{author}{Kang, H.G.},
+  \bibinfo{year}{2007}.
+\newblock \bibinfo{title}{The effect of fair disclosure regulation on
+  information asymmetry in the {Korean} stock market}.
+\newblock \bibinfo{journal}{Asia-Pacific Journal of Financial Studies}
+  \bibinfo{volume}{36}, \bibinfo{pages}{799--838}.
+%Type = Article
+\bibitem[{Johnson and So(2015)}]{johnson2005earnings}
+\bibinfo{author}{Johnson, T.L.}, \bibinfo{author}{So, E.C.},
+  \bibinfo{year}{2015}.
+\newblock \bibinfo{title}{Earnings surprises and the market microstructure}.
+\newblock \bibinfo{journal}{Journal of Financial Economics}
+  \bibinfo{volume}{115}, \bibinfo{pages}{124--145}.
+%Type = Article
+\bibitem[{Kaniel et~al.(2012)Kaniel, Liu, Saar and
+  Titman}]{kaniel2012individual}
+\bibinfo{author}{Kaniel, R.}, \bibinfo{author}{Liu, S.}, \bibinfo{author}{Saar,
+  G.}, \bibinfo{author}{Titman, S.}, \bibinfo{year}{2012}.
+\newblock \bibinfo{title}{Individual investor trading and return patterns
+  around earnings announcements}.
+\newblock \bibinfo{journal}{The Journal of Finance} \bibinfo{volume}{67},
+  \bibinfo{pages}{639--680}.
+%Type = Article
+\bibitem[{Lee and Park(2007)}]{lee2007does}
+\bibinfo{author}{Lee, J.H.}, \bibinfo{author}{Park, K.S.},
+  \bibinfo{year}{2007}.
+\newblock \bibinfo{title}{Does fair disclosure reduce information asymmetry?
+  {Evidence} from analyst coverage in the {Korean} market}.
+\newblock \bibinfo{journal}{Asia-Pacific Journal of Financial Studies}
+  \bibinfo{volume}{36}, \bibinfo{pages}{1--32}.
+%Type = Article
+\bibitem[{MacKinlay(1997)}]{mackinlay1997event}
+\bibinfo{author}{MacKinlay, A.C.}, \bibinfo{year}{1997}.
+\newblock \bibinfo{title}{Event studies in economics and finance}.
+\newblock \bibinfo{journal}{Journal of Economic Literature}
+  \bibinfo{volume}{35}, \bibinfo{pages}{13--39}.
+%Type = Article
+\bibitem[{Meulbroek(1992)}]{meulbroek1992comparison}
+\bibinfo{author}{Meulbroek, L.K.}, \bibinfo{year}{1992}.
+\newblock \bibinfo{title}{An empirical analysis of illegal insider trading}.
+\newblock \bibinfo{journal}{The Journal of Finance} \bibinfo{volume}{47},
+  \bibinfo{pages}{1661--1699}.
+%Type = Article
+\bibitem[{{Securities and Exchange Commission}(2000)}]{reg_fd_2000}
+\bibinfo{author}{{Securities and Exchange Commission}}, \bibinfo{year}{2000}.
+\newblock \bibinfo{title}{{Regulation Fair Disclosure}}.
+\newblock \bibinfo{journal}{SEC Release} .
+
+\end{thebibliography}

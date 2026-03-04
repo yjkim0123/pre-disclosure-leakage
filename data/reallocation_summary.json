@@ -1,0 +1,14 @@
+{
+  "n_chaebol_events": 538,
+  "neg_surprise_peer_car": 0.3006,
+  "pos_surprise_peer_car": -0.1349,
+  "neg_pos_diff": 0.4355,
+  "ttest_pval": 0.9635,
+  "mannwhitney_pval": 0.0102,
+  "spearman_rho": -0.1013,
+  "bootstrap_ci": [
+    -0.0073,
+    0.8753
+  ],
+  "own_peer_corr": 0.1463
+}

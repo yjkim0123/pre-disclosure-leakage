@@ -1,0 +1,300 @@
+\documentclass[review,authoryear]{elsarticle}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage[font=small]{caption}
+
+\journal{Pacific-Basin Finance Journal}
+
+\begin{document}
+
+\begin{frontmatter}
+
+\title{Pre-Disclosure Price Discovery in Korean Earnings Announcements:\\Evidence of Information Leakage Under Fair Disclosure Regulation}
+
+\author{Yongjun Kim}
+\affiliation[ajou]{organization={College of Software Convergence, Ajou University},
+  city={Suwon},
+  country={South Korea}}
+\ead{yjkim0123@ajou.ac.kr}
+
+\begin{abstract}
+This study investigates the extent of pre-disclosure price discovery in Korean earnings announcements using 2,221 fair disclosure filings from 64 KOSPI-listed companies between 2020 and 2026. Despite South Korea's Fair Disclosure regulation (implemented in 2002) mandating simultaneous public dissemination of material information, we find that 91\% of total cumulative abnormal returns (CARs) over the [-5,+5] event window accumulate \textit{before} the official disclosure date. The pre-disclosure CAR[-5,-1] averages +0.64\% ($t$=5.67, $p$<0.001), whereas the event-day CAR[0,+1] is economically negligible at +0.01\% ($p$=0.94). Abnormal trading volume emerges as early as three days prior to disclosure (1.05x baseline, $p$=0.004), intensifying to 1.15x on day $-$1 ($p$<0.001). We document a structural shift: pre-disclosure returns were significantly positive during 2020--2022 but turned negative in 2024--2026, suggesting evolving market dynamics. A significant quarterly pattern also emerges, with Q1 disclosures generating negative CARs ($-$0.51\%, $p$=0.010) and Q2 disclosures generating positive CARs (+0.60\%, $p$=0.003). These findings raise questions about the effectiveness of Korea's Fair Disclosure regime in preventing selective pre-disclosure of earnings information and have implications for regulatory enforcement and market microstructure.
+\end{abstract}
+
+\begin{keyword}
+Fair disclosure \sep Information leakage \sep Earnings announcements \sep Pre-announcement drift \sep DART \sep Korean stock market
+\end{keyword}
+
+\end{frontmatter}
+
+\section{Introduction}
+
+The efficient market hypothesis posits that stock prices should reflect all publicly available information, with price adjustments occurring rapidly upon the release of new information \citep{fama1969adjustment}. Earnings announcements represent one of the most significant information events for equity markets \citep{ball1968empirical}, and their timely and equitable dissemination is a cornerstone of securities regulation worldwide.
+
+In the United States, the Securities and Exchange Commission introduced Regulation Fair Disclosure (Reg FD) in 2000 to address concerns about selective disclosure of material information to analysts and institutional investors \citep{reg_fd_2000}. South Korea adopted a similar Fair Disclosure regulation in November 2002, requiring listed companies to simultaneously disclose material information to all market participants through the DART (Data Analysis, Retrieval and Transfer) electronic filing system operated by the Financial Supervisory Service.
+
+While the Korean Fair Disclosure regulation has been in effect for over two decades, empirical evidence on its long-term effectiveness remains limited. Early studies examined the immediate impact of the regulation's implementation \citep{jang2007fair, lee2007does}, but few have investigated whether the regulation continues to achieve its goal of reducing information asymmetry in more recent periods.
+
+This study addresses this gap by analyzing 2,221 earnings disclosure filings (``영업실적 공정공시'') from 64 major KOSPI-listed companies between 2020 and 2026. We employ an event study methodology to examine abnormal returns and trading volume in the [-5,+5] window around disclosure dates. Our key finding is striking: despite the Fair Disclosure mandate, approximately 91\% of the total cumulative abnormal return over the event window accumulates \textit{before} the official disclosure date. This pre-disclosure price adjustment is accompanied by statistically significant abnormal trading volume beginning three days prior to the announcement.
+
+Our study makes several contributions. First, we provide updated evidence on the effectiveness of Korea's Fair Disclosure regulation using recent data spanning the COVID-19 pandemic and post-pandemic periods. Second, we document a structural shift in pre-disclosure returns across years, with positive pre-announcement drift during 2020--2022 transforming into negative drift in 2024--2026. Third, we identify a significant quarterly pattern in disclosure-related returns, which has not been previously documented in the Korean context. Fourth, our use of the comprehensive DART database with 64 companies across 12 major conglomerates (chaebols) provides broader coverage than prior studies.
+
+The remainder of this paper is organized as follows. Section~\ref{sec:literature} reviews the relevant literature. Section~\ref{sec:data} describes the data and methodology. Section~\ref{sec:results} presents the empirical results. Section~\ref{sec:discussion} discusses the findings and their implications. Section~\ref{sec:conclusion} concludes.
+
+\section{Literature Review}
+\label{sec:literature}
+
+\subsection{Fair Disclosure Regulation}
+
+The rationale for fair disclosure regulation stems from concerns about selective disclosure, whereby corporate insiders share material information with favored analysts or institutional investors before public release \citep{heflin2003regulation}. In the U.S., studies on Regulation FD have produced mixed evidence: some find that it reduced information asymmetry and leveled the playing field \citep{ahmed2003impact}, while others suggest that it may have reduced the overall quality of information available to investors \citep{heflin2003regulation}.
+
+In Korea, \citet{jang2007fair} examined the initial impact of the 2002 Fair Disclosure regulation and found evidence of reduced information asymmetry following its implementation. \citet{lee2007does} similarly documented improvements in analyst forecast accuracy after the regulation. However, these studies focused on the period immediately surrounding the regulation's adoption, leaving open the question of its long-term effectiveness.
+
+\subsection{Pre-Announcement Returns and Information Leakage}
+
+A substantial body of literature has documented pre-announcement drift in stock prices, where prices begin moving in the direction of the forthcoming news before the official announcement \citep{kaniel2012individual}. Such drift can arise from several channels: (1) illegal insider trading \citep{meulbroek1992comparison}, (2) informed trading based on mosaic information assembly \citep{bernile2016can}, (3) predictable earnings patterns that sophisticated investors can anticipate \citep{johnson2005earnings}, or (4) leakage through social networks and informal channels.
+
+\citet{chae2005trading} demonstrated that trading volume patterns around announcements reflect the degree of information asymmetry, with abnormal volume preceding announcements indicating informed trading. More recently, \citet{collin2007volatility} showed that informed traders can be detected through their impact on volatility patterns.
+
+\subsection{Korean Market Context}
+
+The Korean stock market presents a unique institutional context for studying information leakage. The market is characterized by: (1) high concentration of ownership in family-controlled conglomerates (chaebols), (2) a mandatory electronic disclosure system (DART) that provides real-time public access to filings, (3) significant retail investor participation, and (4) relatively strict insider trading regulations. The tension between these institutional features and the evidence of pre-disclosure price discovery motivates our investigation.
+
+\section{Data and Methodology}
+\label{sec:data}
+
+\subsection{Data Sources}
+
+We collect earnings disclosure data from the DART electronic filing system using the OpenDartReader API. Specifically, we retrieve all ``영업실적 공정공시'' (Fair Disclosure of Operating Results) filings between January 2020 and March 2026. We focus on original filings and exclude corrections (``기재정정'') to avoid double-counting.
+
+Our initial sample comprises 2,221 disclosures from 64 companies spanning 12 major chaebol groups: Samsung (12 affiliates), Hyundai Motor (8), SK (7), LG (8), HD Hyundai (5), Hanwha (5), POSCO (4), Lotte (4), Doosan (4), CJ (3), KT (2), and GS (2). Daily stock price data for individual companies and the KOSPI index are obtained from FinanceDataReader.
+
+\subsection{Event Study Methodology}
+
+We employ the market-adjusted model to compute abnormal returns \citep{mackinlay1997event}:
+\begin{equation}
+AR_{i,t} = R_{i,t} - R_{m,t}
+\end{equation}
+where $AR_{i,t}$ is the abnormal return for firm $i$ on day $t$, $R_{i,t}$ is the actual return, and $R_{m,t}$ is the KOSPI index return. Cumulative abnormal returns are computed as:
+\begin{equation}
+CAR_{i}[t_1, t_2] = \sum_{t=t_1}^{t_2} AR_{i,t}
+\end{equation}
+
+We examine the event window [-5,+5] around each disclosure date (day 0). Statistical significance is assessed using cross-sectional $t$-tests with heteroscedasticity-robust standard errors.
+
+\subsection{Abnormal Volume}
+
+Abnormal volume is computed as the ratio of actual trading volume on event day $t$ to the average daily volume during the baseline period [-25,-6]:
+\begin{equation}
+AV_{i,t} = \frac{V_{i,t}}{\frac{1}{20}\sum_{\tau=-25}^{-6} V_{i,\tau}}
+\end{equation}
+A ratio significantly greater than 1.0 indicates abnormal trading activity.
+
+\section{Empirical Results}
+\label{sec:results}
+
+\subsection{Pre-Disclosure Price Discovery}
+
+Table~\ref{tab:ar} presents the average abnormal returns for each day in the [-5,+5] event window. The most striking finding is the significant positive abnormal return on day $-$1 (0.273\%, $t$=4.80, $p$<0.001) and day $-$3 (0.145\%, $t$=2.84, $p$=0.005). The event-day return on day 0 is modest (0.159\%, $t$=2.27, $p$=0.023), followed by a marginally significant reversal on day +1 ($-$0.151\%, $t$=$-$1.97, $p$=0.049).
+
+\begin{table}[H]
+\centering
+\caption{Average Abnormal Returns by Event Day}
+\label{tab:ar}
+\begin{tabular}{lrrrrl}
+\toprule
+Day & AR (\%) & $t$-stat & $p$-value & $N$ & Sig. \\
+\midrule
+$-$5 & 0.126 & 2.58 & 0.010 & 2,221 & * \\
+$-$4 & 0.080 & 1.68 & 0.093 & 2,221 & \\
+$-$3 & 0.145 & 2.84 & 0.005 & 2,221 & ** \\
+$-$2 & 0.016 & 0.37 & 0.711 & 2,221 & \\
+$-$1 & 0.273 & 4.80 & $<$0.001 & 2,221 & *** \\
+\midrule
+0 & 0.159 & 2.27 & 0.023 & 2,221 & * \\
++1 & $-$0.151 & $-$1.97 & 0.049 & 2,221 & * \\
+\midrule
++2 & 0.061 & 1.13 & 0.259 & 2,221 & \\
++3 & $-$0.080 & $-$1.70 & 0.089 & 2,221 & \\
++4 & 0.019 & 0.39 & 0.700 & 2,221 & \\
++5 & 0.052 & 1.03 & 0.304 & 2,221 & \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}
+\small
+\item Note: Abnormal returns are computed using the market-adjusted model (KOSPI index). Significance: *** $p$<0.001, ** $p$<0.01, * $p$<0.05.
+\end{tablenotes}
+\end{table}
+
+Table~\ref{tab:car} reports cumulative abnormal returns for various windows. The pre-disclosure CAR[-5,$-$1] averages 0.640\% ($t$=5.67, $p$<0.001), accounting for 91\% of the total CAR[-5,+5] of 0.700\%. The event-day window CAR[0,+1] is economically negligible at 0.008\% ($p$=0.94), suggesting that virtually all price adjustment occurs before the official filing.
+
+\begin{table}[H]
+\centering
+\caption{Cumulative Abnormal Returns by Window}
+\label{tab:car}
+\begin{tabular}{lrrrrl}
+\toprule
+Window & CAR (\%) & $t$-stat & $p$-value & $N$ & Sig. \\
+\midrule
+{[}$-$5,$-$1{]} & 0.640 & 5.67 & $<$0.001 & 2,221 & *** \\
+{[}$-$3,$-$1{]} & 0.434 & 4.94 & $<$0.001 & 2,221 & *** \\
+{[}0, 0{]} & 0.159 & 2.27 & 0.023 & 2,221 & * \\
+{[}0, +1{]} & 0.008 & 0.08 & 0.939 & 2,221 & \\
+{[}+1, +5{]} & $-$0.099 & $-$0.80 & 0.425 & 2,221 & \\
+{[}$-$5, +5{]} & 0.700 & 3.77 & $<$0.001 & 2,221 & *** \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Figure~\ref{fig:ar_car} visualizes the AR and CAR patterns across the event window, clearly illustrating the pre-disclosure price run-up.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.85\textwidth]{figures/fig1_ar_car.pdf}
+\caption{Abnormal returns (bars) and cumulative abnormal returns (line) around earnings disclosure dates. Red bars indicate pre-disclosure days, green indicates the disclosure date, and blue indicates post-disclosure days. The vertical dashed line separates the pre- and post-disclosure periods.}
+\label{fig:ar_car}
+\end{figure}
+
+\subsection{Abnormal Trading Volume}
+
+Table~\ref{tab:volume} presents abnormal volume ratios. Notably, volume begins to increase significantly from day $-$3 (1.05x, $p$=0.004), intensifying on day $-$1 (1.15x, $p$<0.001). Volume peaks on day +1 (1.71x) and remains elevated through day +5 (1.15x).
+
+\begin{table}[H]
+\centering
+\caption{Abnormal Volume Ratios by Event Day}
+\label{tab:volume}
+\begin{tabular}{lrrrrl}
+\toprule
+Day & Avg. Volume Ratio & $t$-stat & $p$-value & $N$ & Sig. \\
+\midrule
+$-$5 & 1.01 & 1.02 & 0.309 & 2,221 & \\
+$-$4 & 1.03 & 1.66 & 0.097 & 2,221 & \\
+$-$3 & 1.05 & 2.92 & 0.004 & 2,221 & ** \\
+$-$2 & 1.04 & 2.44 & 0.015 & 2,221 & * \\
+$-$1 & 1.15 & 6.24 & $<$0.001 & 2,221 & *** \\
+\midrule
+0 & 1.51 & 15.14 & $<$0.001 & 2,221 & *** \\
++1 & 1.71 & 19.14 & $<$0.001 & 2,221 & *** \\
+\midrule
++2 & 1.33 & 11.80 & $<$0.001 & 2,221 & *** \\
++3 & 1.18 & 9.88 & $<$0.001 & 2,221 & *** \\
++4 & 1.14 & 7.51 & $<$0.001 & 2,221 & *** \\
++5 & 1.15 & 6.82 & $<$0.001 & 2,221 & *** \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}
+\small
+\item Note: Volume ratio = event-day volume / average volume during [-25,-6]. A ratio of 1.0 indicates normal volume. Significance tests against $H_0$: ratio = 1.0.
+\end{tablenotes}
+\end{table}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.85\textwidth]{figures/fig2_volume.pdf}
+\caption{Abnormal trading volume ratios around earnings disclosure dates. The dashed horizontal line represents normal volume (1.0x). Volume begins increasing 3 days before the disclosure, suggesting informed trading activity prior to public announcement.}
+\label{fig:volume}
+\end{figure}
+
+\subsection{Temporal Dynamics}
+
+We examine whether pre-disclosure patterns vary across years. Figure~\ref{fig:year} and Table~\ref{tab:year} reveal a notable structural shift. During 2020--2022, both pre-disclosure and event-day CARs were predominantly positive, with particularly strong effects in 2021 (CAR[0,+1]=0.72\%, $p$=0.001). However, this pattern reversed in 2024--2026, where CARs turned significantly negative (2024: $-$0.57\%, $p$=0.046; 2026: $-$2.30\%, $p$=0.003).
+
+\begin{table}[H]
+\centering
+\caption{Event-Day CAR[0,+1] by Year}
+\label{tab:year}
+\begin{tabular}{lrrrrl}
+\toprule
+Year & CAR (\%) & $t$-stat & $p$-value & $N$ & Sig. \\
+\midrule
+2020 & 0.395 & 1.75 & 0.081 & 331 & \\
+2021 & 0.718 & 3.27 & 0.001 & 357 & ** \\
+2022 & 0.517 & 2.39 & 0.017 & 370 & * \\
+2023 & 0.090 & 0.31 & 0.755 & 356 & \\
+2024 & $-$0.567 & $-$2.00 & 0.046 & 361 & * \\
+2025 & $-$0.498 & $-$1.53 & 0.126 & 354 & \\
+2026 & $-$2.295 & $-$3.02 & 0.003 & 92 & ** \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.85\textwidth]{figures/fig3_year.pdf}
+\caption{Pre-disclosure CAR[-3,-1] and event-day CAR[0,+1] by year. A structural shift is evident: positive CARs during 2020--2022 give way to negative CARs in 2024--2026.}
+\label{fig:year}
+\end{figure}
+
+\subsection{Quarterly Patterns}
+
+Table~\ref{tab:quarter} reports CARs by fiscal quarter. A significant pattern emerges: Q1 disclosures generate negative CARs ($-$0.51\%, $p$=0.010), while Q2 disclosures generate positive CARs (+0.60\%, $p$=0.003). This asymmetry likely reflects the predictable nature of annual results announced in Q1 (which tend to contain negative adjustments) versus the positive surprises more common in Q2 interim results.
+
+\begin{table}[H]
+\centering
+\caption{Event-Day CAR[0,+1] by Quarter}
+\label{tab:quarter}
+\begin{tabular}{lrrrrl}
+\toprule
+Quarter & CAR (\%) & $t$-stat & $p$-value & $N$ & Sig. \\
+\midrule
+Q1 & $-$0.511 & $-$2.57 & 0.010 & 671 & * \\
+Q2 & 0.597 & 3.02 & 0.003 & 517 & ** \\
+Q3 & 0.387 & 1.54 & 0.124 & 510 & \\
+Q4 & $-$0.277 & $-$1.27 & 0.205 & 523 & \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.6\textwidth]{figures/fig4_quarter.pdf}
+\caption{Event-day CAR[0,+1] by fiscal quarter. Q1 and Q2 show statistically significant opposite effects.}
+\label{fig:quarter}
+\end{figure}
+
+\section{Discussion}
+\label{sec:discussion}
+
+\subsection{Evidence of Pre-Disclosure Information Leakage}
+
+Our central finding---that 91\% of cumulative abnormal returns accumulate before the official disclosure date---raises serious questions about the effectiveness of Korea's Fair Disclosure regulation. The concurrent presence of abnormal trading volume beginning three days before disclosure further supports the interpretation that some market participants obtain or infer material information before the public announcement.
+
+However, we acknowledge that pre-disclosure price movement does not necessarily imply illegal information leakage. Several alternative explanations exist. First, sophisticated investors may successfully anticipate earnings based on publicly available information such as macroeconomic indicators, industry trends, or supply chain data. Second, the timing of DART filings within the trading day matters: if disclosures are filed during market hours but after significant price movement has occurred, the ``pre-disclosure'' return may simply reflect intra-day information flow.
+
+\subsection{Structural Shift Across Years}
+
+The transition from positive pre-announcement drift during 2020--2022 to negative drift in 2024--2026 is noteworthy. The early period coincided with the COVID-19 recovery, when corporate earnings generally exceeded expectations. The later period corresponds to a period of rising interest rates and economic slowdown, when earnings more frequently disappointed. This suggests that the direction of pre-disclosure drift reflects the prevailing macroeconomic environment rather than a change in the information leakage mechanism.
+
+\subsection{Policy Implications}
+
+Our findings have implications for regulators. The Korean Financial Supervisory Service may need to: (1) investigate whether fair disclosure requirements are being circumvented through informal channels, (2) enhance monitoring of abnormal trading patterns before scheduled disclosures, and (3) consider requiring disclosures to be filed outside of trading hours to reduce the opportunity for informed trading.
+
+\subsection{Limitations}
+
+This study has several limitations. First, we use the market-adjusted model rather than a multi-factor model for computing abnormal returns. While common in event studies, this approach may not fully account for risk factor exposures. Second, we cannot distinguish between legal anticipation and illegal leakage using stock market data alone. Third, our sample is limited to large KOSPI-listed companies affiliated with chaebols, which may not be representative of the broader market. Fourth, the 2026 data is limited to the first quarter, which may bias the most recent year's estimates.
+
+\section{Conclusion}
+\label{sec:conclusion}
+
+This study presents evidence that a substantial portion of the stock market's reaction to Korean earnings disclosures occurs before the official filing date, despite the Fair Disclosure regulation designed to ensure simultaneous public access to material information. Using 2,221 disclosures from 64 companies over 2020--2026, we find that 91\% of cumulative abnormal returns in the [-5,+5] event window accumulate during the pre-disclosure period. Abnormal trading volume confirms that market activity intensifies days before the public announcement.
+
+These findings suggest that either the Fair Disclosure regime is insufficient to prevent selective information leakage, or that Korea's earnings disclosures are highly predictable to sophisticated investors. Either interpretation has significant implications for market fairness, regulatory policy, and investor protection. Future research should examine intra-day trading patterns, distinguish between institutional and retail investor behavior, and investigate whether specific firms or chaebol groups exhibit higher degrees of pre-disclosure information leakage.
+
+\section*{CRediT authorship contribution statement}
+\textbf{Yongjun Kim:} Conceptualization, Methodology, Software, Formal analysis, Investigation, Data curation, Writing -- original draft, Visualization.
+
+\section*{Declaration of competing interest}
+The author declares no competing financial interests or personal relationships that could have influenced the work reported in this paper.
+
+\section*{Data availability}
+All disclosure data are publicly available through the DART system (\url{https://dart.fss.or.kr}). Stock price data are obtained from KRX via FinanceDataReader. Analysis code is available upon request.
+
+\bibliographystyle{elsarticle-harv}
+\bibliography{refs}
+
+\end{document}

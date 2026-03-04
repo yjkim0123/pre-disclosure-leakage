@@ -1,0 +1,14 @@
+{
+  "n": 1197,
+  "finbert_model": "snunlp/KR-FinBert-SC",
+  "finbert_car_corr": 0.0527,
+  "lexicon_car_corr": 0.0716,
+  "long_short_spread": 0.196,
+  "long_short_pval": 0.2809,
+  "best_ml_r2": 0.1319,
+  "finbert_dist": {
+    "positive": 620,
+    "neutral": 569,
+    "negative": 7
+  }
+}

@@ -1,0 +1,14 @@
+data/*.pkl
+data/*.csv
+__pycache__/
+*.pyc
+paper/*.aux
+paper/*.bbl
+paper/*.blg
+paper/*.log
+paper/*.out
+paper/*.synctex.gz
+paper/*.fls
+paper/*.fdb_latexmk
+paper/figures/*.png
+.DS_Store

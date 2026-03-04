@@ -1,0 +1,17 @@
+{
+  "n_disclosures": 1197,
+  "n_companies": 29,
+  "period": "20200102 ~ 20260303",
+  "parsing_rate": {
+    "revenue": 1000,
+    "op_profit": 1000,
+    "revenue_yoy": 969,
+    "op_profit_yoy": 889
+  },
+  "car_overall": {
+    "car_1d_mean": 0.453,
+    "car_3d_mean": 0.844
+  },
+  "best_regression_r2": 0.1485,
+  "best_model": "RF"
+}
