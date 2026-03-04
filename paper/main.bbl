@@ -1,4 +1,4 @@
-\begin{thebibliography}{16}
+\begin{thebibliography}{11}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \providecommand{\url}[1]{\texttt{#1}}
 \providecommand{\href}[2]{#2}
@@ -21,13 +21,6 @@
 \newblock \bibinfo{journal}{Journal of Corporate Finance} \bibinfo{volume}{13},
   \bibinfo{pages}{282--299}.
 %Type = Article
-\bibitem[{Ball and Brown(1968)}]{ball1968empirical}
-\bibinfo{author}{Ball, R.}, \bibinfo{author}{Brown, P.}, \bibinfo{year}{1968}.
-\newblock \bibinfo{title}{An empirical evaluation of accounting income
-  numbers}.
-\newblock \bibinfo{journal}{Journal of Accounting Research}
-  \bibinfo{volume}{6}, \bibinfo{pages}{159--178}.
-%Type = Article
 \bibitem[{Bernile et~al.(2016)Bernile, Hu and Tang}]{bernile2016can}
 \bibinfo{author}{Bernile, G.}, \bibinfo{author}{Hu, J.}, \bibinfo{author}{Tang,
   Y.}, \bibinfo{year}{2016}.
@@ -35,13 +28,6 @@
   ahead of macro-news announcements}.
 \newblock \bibinfo{journal}{Journal of Financial Economics}
   \bibinfo{volume}{121}, \bibinfo{pages}{496--520}.
-%Type = Article
-\bibitem[{Campbell et~al.(1997)Campbell, Lo and
-  MacKinlay}]{campbell1997econometrics}
-\bibinfo{author}{Campbell, J.Y.}, \bibinfo{author}{Lo, A.W.},
-  \bibinfo{author}{MacKinlay, A.C.}, \bibinfo{year}{1997}.
-\newblock \bibinfo{title}{The econometrics of financial markets}.
-\newblock \bibinfo{journal}{Princeton University Press} .
 %Type = Article
 \bibitem[{Chae(2005)}]{chae2005trading}
 \bibinfo{author}{Chae, J.}, \bibinfo{year}{2005}.
@@ -57,21 +43,6 @@
   and evidence}.
 \newblock \bibinfo{journal}{Journal of Financial Economics}
   \bibinfo{volume}{72}, \bibinfo{pages}{485--518}.
-%Type = Article
-\bibitem[{Collin-Dufresne and Fos(2015)}]{collin2007volatility}
-\bibinfo{author}{Collin-Dufresne, P.}, \bibinfo{author}{Fos, V.},
-  \bibinfo{year}{2015}.
-\newblock \bibinfo{title}{Volatility and informed trading}.
-\newblock \bibinfo{journal}{The Journal of Finance} \bibinfo{volume}{70},
-  \bibinfo{pages}{1709--1749}.
-%Type = Article
-\bibitem[{Fama et~al.(1969)Fama, Fisher, Jensen and Roll}]{fama1969adjustment}
-\bibinfo{author}{Fama, E.F.}, \bibinfo{author}{Fisher, L.},
-  \bibinfo{author}{Jensen, M.C.}, \bibinfo{author}{Roll, R.},
-  \bibinfo{year}{1969}.
-\newblock \bibinfo{title}{The adjustment of stock prices to new information}.
-\newblock \bibinfo{journal}{International Economic Review}
-  \bibinfo{volume}{10}, \bibinfo{pages}{1--21}.
 %Type = Article
 \bibitem[{Heflin et~al.(2003)Heflin, Subramanyam and
   Zhang}]{heflin2003regulation}
@@ -125,10 +96,5 @@
 \newblock \bibinfo{title}{An empirical analysis of illegal insider trading}.
 \newblock \bibinfo{journal}{The Journal of Finance} \bibinfo{volume}{47},
   \bibinfo{pages}{1661--1699}.
-%Type = Article
-\bibitem[{{Securities and Exchange Commission}(2000)}]{reg_fd_2000}
-\bibinfo{author}{{Securities and Exchange Commission}}, \bibinfo{year}{2000}.
-\newblock \bibinfo{title}{{Regulation Fair Disclosure}}.
-\newblock \bibinfo{journal}{SEC Release} .
 
 \end{thebibliography}

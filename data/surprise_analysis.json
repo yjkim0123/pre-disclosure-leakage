@@ -1,0 +1,12 @@
+{
+  "n_with_surprise": 584,
+  "n_pos_surprise": 358,
+  "n_neg_surprise": 226,
+  "pos_surprise_car_pre": 0.032759904037561106,
+  "neg_surprise_car_pre": 0.1289248012732472,
+  "direction_accuracy": 0.4897260273972603,
+  "direction_pvalue": 0.003322559931894421,
+  "corr_yoy_car": -0.05156952495385338,
+  "spearman_rho": -0.006455947933983471,
+  "spearman_p": 0.8762833801042682
+}
