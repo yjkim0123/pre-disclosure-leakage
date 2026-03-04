@@ -1,0 +1,13 @@
+{
+  "n_after_hours": 3115,
+  "n_during_hours": 81,
+  "pct_after_hours": 97.46558197747184,
+  "car_pre_corrected_5_0": 0.5964211442516879,
+  "car_pre_corrected_3_0": 0.43792532853879135,
+  "car_post_1_5": -0.22431705648267317,
+  "car_full": 0.3721040877690147,
+  "pct_pre_disclosure": 160.28341634933045,
+  "direction_agreement": 0.5393258426966292,
+  "pct_positive_pre": 50.75441412520064,
+  "corr_pre_post": 0.08549685087131184
+}

@@ -1,4 +1,4 @@
-\begin{thebibliography}{14}
+\begin{thebibliography}{16}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \providecommand{\url}[1]{\texttt{#1}}
 \providecommand{\href}[2]{#2}
@@ -36,12 +36,27 @@
 \newblock \bibinfo{journal}{Journal of Financial Economics}
   \bibinfo{volume}{121}, \bibinfo{pages}{496--520}.
 %Type = Article
+\bibitem[{Campbell et~al.(1997)Campbell, Lo and
+  MacKinlay}]{campbell1997econometrics}
+\bibinfo{author}{Campbell, J.Y.}, \bibinfo{author}{Lo, A.W.},
+  \bibinfo{author}{MacKinlay, A.C.}, \bibinfo{year}{1997}.
+\newblock \bibinfo{title}{The econometrics of financial markets}.
+\newblock \bibinfo{journal}{Princeton University Press} .
+%Type = Article
 \bibitem[{Chae(2005)}]{chae2005trading}
 \bibinfo{author}{Chae, J.}, \bibinfo{year}{2005}.
 \newblock \bibinfo{title}{Trading volume, information asymmetry, and timing
   information}.
 \newblock \bibinfo{journal}{The Journal of Finance} \bibinfo{volume}{60},
   \bibinfo{pages}{413--442}.
+%Type = Article
+\bibitem[{Chordia and Subrahmanyam(2004)}]{chordia2004order}
+\bibinfo{author}{Chordia, T.}, \bibinfo{author}{Subrahmanyam, A.},
+  \bibinfo{year}{2004}.
+\newblock \bibinfo{title}{Order imbalance and individual stock returns: Theory
+  and evidence}.
+\newblock \bibinfo{journal}{Journal of Financial Economics}
+  \bibinfo{volume}{72}, \bibinfo{pages}{485--518}.
 %Type = Article
 \bibitem[{Collin-Dufresne and Fos(2015)}]{collin2007volatility}
 \bibinfo{author}{Collin-Dufresne, P.}, \bibinfo{author}{Fos, V.},
