@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2026.2.5)  4 MAR 2026 23:22
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2026.2.5)  5 MAR 2026 00:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -621,7 +621,9 @@ al/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}]
 
 [2]
 
-[3] (/usr/local/texlive/2025/texmf-dist/tex/latex/cjk/texinput/UTF8/UTF8.bdg
+[3]
+
+[4] (/usr/local/texlive/2025/texmf-dist/tex/latex/cjk/texinput/UTF8/UTF8.bdg
 File: UTF8.bdg 2021/10/16 4.8.5
 )
 (/usr/local/texlive/2025/texmf-dist/tex/latex/cjk/texinput/UTF8/UTF8.enc
@@ -630,7 +632,7 @@ File: UTF8.enc 2021/10/16 4.8.5
 (/usr/local/texlive/2025/texmf-dist/tex/latex/cjk/texinput/UTF8/UTF8.chr
 File: UTF8.chr 2021/10/16 4.8.5
 )
-LaTeX Font Info:    Trying to load font information for C70+mj on input line 79
+LaTeX Font Info:    Trying to load font information for C70+mj on input line 83
 .
 
 (/usr/local/texlive/2025/texmf-dist/tex/latex/cjk/texinput/UTF8/c70mj.fd
@@ -646,59 +648,61 @@ File: UTF8.enc 2021/10/16 4.8.5
 File: UTF8.chr 2021/10/16 4.8.5
 )
 
-[4]
-
 [5]
 
-[6{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
+[6]
+
+[7{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
 }]
 
-[7]
-Overfull \hbox (31.82364pt too wide) in paragraph at lines 198--215
+[8]
+Overfull \hbox (31.82364pt too wide) in paragraph at lines 202--219
  [] 
  []
 
 
 
-[8]
-<figures/fig2_volume.pdf, id=225, 505.21278pt x 315.28542pt>
+[9]
+<figures/fig2_volume.pdf, id=268, 505.21278pt x 315.28542pt>
 File: figures/fig2_volume.pdf Graphic file (type pdf)
 <use figures/fig2_volume.pdf>
-Package pdftex.def Info: figures/fig2_volume.pdf  used on input line 250.
+Package pdftex.def Info: figures/fig2_volume.pdf  used on input line 254.
 (pdftex.def)             Requested size: 293.2521pt x 183.0148pt.
 
 
-[9]
-<figures/fig3_year.pdf, id=231, 496.22952pt x 315.40712pt>
+[10]
+<figures/fig3_year.pdf, id=274, 496.22952pt x 315.40712pt>
 File: figures/fig3_year.pdf Graphic file (type pdf)
 <use figures/fig3_year.pdf>
-Package pdftex.def Info: figures/fig3_year.pdf  used on input line 263.
+Package pdftex.def Info: figures/fig3_year.pdf  used on input line 267.
 (pdftex.def)             Requested size: 293.2521pt x 186.39659pt.
 
 
-[10 <./figures/fig2_volume.pdf>]
+[11 <./figures/fig2_volume.pdf>]
 
-[11 <./figures/fig3_year.pdf>]
+[12 <./figures/fig3_year.pdf>]
 
-[12]
+[13]
 
-[13] (./main.bbl
+[14] (./main.bbl
 
-[14])
+[15]
 
-[15] (./main.aux)
+[16])
+
+[17] (./main.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 4E34E4F53BA2872D98243E17AE4DEE5C;5034.
+(rerunfilecheck)             Checksum: 4EFF469EF78DF4C3E465C9E9C27DEFBC;5213.
  ) 
 Here is how much of TeX's memory you used:
- 14193 strings out of 473190
- 217081 string characters out of 5715801
- 629851 words of memory out of 5000000
- 37134 multiletter control sequences out of 15000+600000
+ 14238 strings out of 473190
+ 218082 string characters out of 5715801
+ 629230 words of memory out of 5000000
+ 37165 multiletter control sequences out of 15000+600000
  579893 words of font info for 94 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,11n,79p,1445b,754s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -724,10 +728,10 @@ ist/fonts/type1/public/cm-super/sftt1000.pfb></usr/local/texlive/2025/texmf-dis
 t/fonts/type1/uhc/umj/umj10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1
 /uhc/umj/umj12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/uhc/umj/umj1
 3.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/uhc/umj/umj14.pfb>
-Output written on main.pdf (15 pages, 392288 bytes).
+Output written on main.pdf (17 pages, 398725 bytes).
 PDF statistics:
- 487 PDF objects out of 1000 (max. 8388607)
- 322 compressed objects within 4 object streams
- 71 named destinations out of 1000 (max. 500000)
- 239 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 543 PDF objects out of 1000 (max. 8388607)
+ 376 compressed objects within 4 object streams
+ 85 named destinations out of 1000 (max. 500000)
+ 247 words of extra memory for PDF output out of 10000 (max. 10000000)
 

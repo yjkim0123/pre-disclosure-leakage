@@ -38,7 +38,7 @@ Fair disclosure \sep Earnings announcements \sep Market efficiency \sep DART \se
 
 Pre-announcement drift in stock prices is a well-documented phenomenon across global equity markets \citep{kaniel2012individual}. When stock prices move before official earnings announcements, a natural concern arises: is material information leaking to select market participants in violation of fair disclosure regulations? This concern motivates securities regulators worldwide to mandate simultaneous public dissemination of material information.
 
-South Korea implemented its Fair Disclosure regulation in November 2002, requiring listed companies to disclose material information simultaneously to all market participants through the DART (Data Analysis, Retrieval and Transfer) electronic filing system. While early studies found evidence of reduced information asymmetry following the regulation's adoption \citep{jang2007fair, lee2007does}, whether the regulation continues to be effective over two decades later remains an open question.
+South Korea implemented its Fair Disclosure regulation in November 2002, requiring listed companies to disclose material information simultaneously to all market participants through the DART (Data Analysis, Retrieval and Transfer) electronic filing system. While early studies found evidence of improved disclosure environments following the regulation's adoption \citep{yun2012fair, park2020disclosure}, whether the regulation continues to be effective over two decades later remains an open question.
 
 This study examines the long-term effectiveness of Korea's Fair Disclosure regulation by analyzing 2,221 earnings disclosure filings from 64 major KOSPI-listed companies between 2020 and 2026. Our approach differs from prior work in a critical respect: rather than simply documenting the existence of pre-disclosure price movement, we test whether such movement is \textit{directionally informative}---that is, whether it predicts the sign of the actual earnings surprise.
 
@@ -55,21 +55,25 @@ We make four contributions. First, we provide the first long-term assessment of 
 
 Fair disclosure regulation addresses selective disclosure, whereby corporate insiders share material information with favored market participants before public release \citep{heflin2003regulation}. In the U.S., Regulation Fair Disclosure (Reg FD), implemented in 2000, produced mixed evidence: \citet{ahmed2003impact} find reduced information asymmetry, while \citet{heflin2003regulation} document reduced information quality.
 
-In Korea, \citet{jang2007fair} found evidence of reduced information asymmetry following the 2002 regulation, and \citet{lee2007does} documented improvements in analyst forecast accuracy. However, these studies focused on the regulation's adoption period. Our study extends this literature by examining whether the regulation remains effective over two decades later.
+In Korea, \citet{yun2012fair} examined the effect of fair disclosure regulation on the timeliness and informativeness of earnings announcements, while \citet{park2020disclosure} investigated how disclosure frequency under the regulation affects the information environment and cost of capital. More recently, \citet{shin2023korea} studied the effects of Korea's compulsory preliminary earnings announcements on stock prices. However, these studies do not examine whether pre-disclosure price movements are directionally informative with respect to the actual earnings news---the central question of our study.
 
 \subsection{Pre-Announcement Drift and Its Interpretation}
 
-Pre-announcement drift is well-documented but its interpretation is debated. \citet{meulbroek1992comparison} provides evidence of illegal insider trading preceding announcements. \citet{bernile2016can} show that informed trading occurs even ahead of macro-news announcements where information is tightly controlled. However, \citet{kaniel2012individual} demonstrate that individual investor trading patterns around earnings announcements can generate drift without requiring illegal information leakage.
+Pre-announcement drift in stock prices is well-documented but its interpretation is debated. \citet{meulbroek1992comparison} provides evidence of illegal insider trading preceding announcements. \citet{bernile2016can} show that informed trading occurs even ahead of macro-news announcements where information is tightly controlled. However, \citet{kaniel2012individual} demonstrate that individual investor trading patterns around earnings announcements can generate drift without requiring illegal information leakage.
 
-Critically, the mere existence of pre-announcement drift does not establish information leakage. As \citet{johnson2005earnings} argue, predictable earnings patterns allow sophisticated investors to position ahead of announcements through legal means. \citet{chae2005trading} shows that abnormal volume before announcements reflects information asymmetry but may arise from varying levels of investor sophistication rather than illegal tip-offs.
+Critically, the mere existence of pre-announcement drift does not establish information leakage. Predictable earnings patterns allow sophisticated investors to position ahead of announcements through legal means \citep{atiase1985predisclosure}. \citet{chae2005trading} shows that abnormal volume before announcements reflects information asymmetry but may arise from varying levels of investor sophistication rather than illegal tip-offs. A related literature on post-earnings-announcement drift (PEAD) demonstrates that markets may take days or weeks to fully incorporate earnings information \citep{bernard1989post, bernard1990evidence}, further complicating the interpretation of short-window event studies.
+
+\subsection{Event Study Methodology}
+
+The standard event study framework \citep{brown1985using, mackinlay1997event} relies on parametric tests of mean abnormal returns. However, \citet{kolari2010event} demonstrate that cross-sectional correlation of abnormal returns can substantially inflate test statistics, particularly when events cluster in calendar time. \citet{patell1976corporate} introduced standardized abnormal returns to improve the power of event study tests. We incorporate both non-parametric alternatives and standardized returns to address these concerns.
 
 \subsection{Filing Time and Market Microstructure}
 
-The timing of information release within the trading day has received increasing attention. \citet{chordia2004order} discuss how after-hours disclosures allow overnight information processing. Our study is among the first to systematically classify DART filing times and demonstrate their implications for event study interpretation.
+The timing of information release within the trading day affects how markets process information. \citet{lee1993market} shows that market microstructure features influence price discovery, while \citet{berkman2009sell} document differences in trading patterns around earnings announcements related to differences of opinion. \citet{bamber1997trading} demonstrate that trading volume around announcements reflects disagreement among investors. Our study is among the first to systematically classify DART filing times and demonstrate their implications for event study interpretation in the Korean market.
 
 \subsection{Korean Market Context}
 
-The Korean stock market features concentrated chaebol ownership, a mandatory electronic disclosure system (DART), significant retail investor participation, and relatively strict insider trading regulations. These institutional features make Korea an ideal setting for testing fair disclosure effectiveness.
+The Korean stock market features concentrated chaebol ownership, a mandatory electronic disclosure system (DART), significant retail investor participation, and relatively strict insider trading regulations \citep{lee2019regulation}. \citet{kim2002market} show that market liquidity and volume patterns around earnings announcements are informative about the information environment. These institutional features, combined with the comprehensive DART database, make Korea an ideal setting for testing fair disclosure effectiveness.
 
 \section{Data and Methodology}
 \label{sec:data}
@@ -306,6 +310,9 @@ Our results carry a broader methodological lesson: the existence of pre-announce
 
 \section*{Declaration of competing interest}
 The author declares no competing financial interests or personal relationships that could have influenced the work reported in this paper.
+
+\section*{Declaration of generative AI use}
+Generative AI tools were used to assist with data processing code and manuscript drafting. The author takes full responsibility for the content, analysis, and conclusions presented in this paper.
 
 \section*{Data availability}
 All disclosure data are publicly available through the DART system (\url{https://dart.fss.or.kr}). Stock price data are obtained from KRX via FinanceDataReader. Analysis code is available at \url{https://github.com/yjkim0123/pre-disclosure-leakage}.
