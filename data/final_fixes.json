@@ -1,0 +1,10 @@
+{
+  "day1_pos_surprise": 0.5520150914615891,
+  "day1_neg_surprise": -0.5795228715683222,
+  "day1_diff_p": 6.87820839778367e-06,
+  "day1_direction_acc": 0.6061643835616438,
+  "day1_direction_p": 3.2530874727572977e-07,
+  "selection_bias_car_pre3_p": 0.1472961934051261,
+  "n_parseable": 584,
+  "n_nonparseable": 1856
+}

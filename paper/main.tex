@@ -25,7 +25,7 @@
 \ead{yjkim0123@ajou.ac.kr}
 
 \begin{abstract}
-Does South Korea's Fair Disclosure regulation effectively ensure that earnings information reaches all market participants simultaneously? Using 2,221 earnings disclosure filings from 64 KOSPI-listed companies across 12 chaebol groups (2020--2026), we find a seemingly paradoxical pattern: statistically significant pre-disclosure abnormal returns coexist with strong evidence that Fair Disclosure \textit{works}. While the market model yields a pre-disclosure CAR[-5,$-$1] of +0.52\% ($t$=4.65, $p$<0.001), this drift does not predict the direction of actual earnings surprises (49.0\% accuracy, $p$=0.649; Spearman $\rho$=$-$0.006, $p$=0.876). Non-parametric tests confirm that the drift is driven by outliers rather than systematic directional movement (sign test $p$=0.585; Wilcoxon $p$=0.142). In contrast, event-day returns respond sharply and correctly to earnings surprises: positive surprises generate CAR[0,+1] of +0.81\%, negative surprises $-$0.47\% ($p$<0.001). We further document that 96.5\% of filings occur after market close, making the event-day return effectively pre-disclosure and the first true market reaction occurring on Day +1. Our findings suggest that Korea's Fair Disclosure regime successfully prevents directional information leakage, even though non-directional price noise and abnormal volume emerge in the pre-disclosure period.
+Does South Korea's Fair Disclosure regulation effectively ensure that earnings information reaches all market participants simultaneously? Using 2,221 earnings disclosure filings from 64 KOSPI-listed companies across 12 chaebol groups (2020--2026), we find that pre-disclosure abnormal returns, while statistically significant under parametric tests (CAR[-5,$-$1] = +0.52\%, $p$<0.001), do not predict the direction of actual earnings surprises (49.0\% accuracy, $p$=0.649; Spearman $\rho$=$-$0.006, $p$=0.876). Non-parametric tests confirm that the drift is driven by outliers rather than systematic directional movement (sign test $p$=0.585; Wilcoxon $p$=0.142). In contrast, the first post-disclosure trading day (Day +1) responds sharply and correctly to earnings surprises: positive surprises generate AR of +0.55\%, negative surprises $-$0.58\% ($p$<0.001), with 60.6\% direction accuracy ($p$<0.001). We further document that 96.5\% of filings occur after market close, making Day 0 effectively pre-disclosure. These results are robust to firm-clustered and month-clustered standard errors. Our findings suggest that Korea's Fair Disclosure regime effectively prevents directional information leakage, even though non-directional price noise and abnormal volume emerge in the pre-disclosure period.
 \end{abstract}
 
 \begin{keyword}
@@ -42,7 +42,7 @@ South Korea implemented its Fair Disclosure regulation in November 2002, requiri
 
 This study examines the long-term effectiveness of Korea's Fair Disclosure regulation by analyzing 2,221 earnings disclosure filings from 64 major KOSPI-listed companies between 2020 and 2026. Our approach differs from prior work in a critical respect: rather than simply documenting the existence of pre-disclosure price movement, we test whether such movement is \textit{directionally informative}---that is, whether it predicts the sign of the actual earnings surprise.
 
-Our findings reveal a seemingly paradoxical pattern. On the one hand, we observe statistically significant pre-disclosure abnormal returns under standard parametric tests (CAR[-5,$-$1] = +0.52\%, $p$<0.001 under the market model). On the other hand, this drift bears no systematic relationship to the direction of actual earnings surprises. Pre-disclosure returns predict surprise direction with only 49.0\% accuracy---no better than a coin flip ($p$=0.649). Non-parametric tests (sign test, Wilcoxon signed-rank) fail to confirm the parametric result, indicating that the observed mean drift is driven by outliers rather than a pervasive pattern.
+Our findings reveal an important pattern. We observe statistically significant pre-disclosure abnormal returns under standard parametric tests (CAR[-5,$-$1] = +0.52\%, $p$<0.001 under the market model; $p$=0.032 with month-clustered standard errors). However, this drift bears no systematic relationship to the direction of actual earnings surprises. Pre-disclosure returns predict surprise direction with only 49.0\% accuracy---no better than a coin flip ($p$=0.649). Non-parametric tests (sign test, Wilcoxon signed-rank) fail to confirm the parametric result, indicating that the observed mean drift is driven by outliers rather than a pervasive pattern.
 
 In contrast, the market responds sharply and correctly to the actual earnings news on the disclosure date. Positive earnings surprises generate a CAR[0,+1] of +0.81\%, while negative surprises generate $-$0.47\%, a highly significant difference ($p$<0.001). This finding is consistent with effective Fair Disclosure: material information is incorporated into prices only when it becomes publicly available.
 
@@ -207,6 +207,8 @@ Window & Positive ($N$=358) & Negative ($N$=226) & Difference & $p$-value & Sig.
 \midrule
 CAR[-3,$-$1] & +0.033\% & +0.129\% & $-$0.096\% & 0.703 & \\
 CAR[-5,$-$1] & +0.107\% & +0.535\% & $-$0.428\% & 0.192 & \\
+\midrule
+AR[+1] & +0.552\% & $-$0.580\% & +1.132\% & $<$0.001 & *** \\
 CAR[0,+1] & +0.813\% & $-$0.470\% & +1.283\% & $<$0.001 & *** \\
 CAR[+1,+5] & +0.481\% & $-$0.481\% & +0.962\% & 0.010 & ** \\
 \bottomrule
@@ -220,7 +222,9 @@ CAR[+1,+5] & +0.481\% & $-$0.481\% & +0.962\% & 0.010 & ** \\
 
 Pre-disclosure CAR[-3,$-$1] is virtually identical for positive (+0.033\%) and negative (+0.129\%) surprises, with no significant difference ($p$=0.703). The direction prediction accuracy is 49.0\%---no better than chance (binomial $p$=0.649). The Spearman rank correlation between YoY profit change and pre-disclosure CAR is $-$0.006 ($p$=0.876).
 
-In stark contrast, event-day returns respond sharply and correctly to the actual news. CAR[0,+1] is +0.81\% for positive surprises and $-$0.47\% for negative surprises, a difference of +1.28\% ($p$<0.001). This pattern extends to CAR[+1,+5] as well ($p$=0.010). The market processes the disclosed information efficiently and in the correct direction.
+In stark contrast, post-disclosure returns respond sharply and correctly to the actual news. Since 96.5\% of filings occur after market close, Day~+1 is the first true post-disclosure trading session. Isolating Day~+1 alone, positive surprises generate AR of +0.55\% while negative surprises generate $-$0.58\%, a difference of +1.13\% ($p$<0.001), with 60.6\% direction accuracy ($p$<0.001). This pattern extends to CAR[0,+1] (+1.28\%, $p$<0.001) and CAR[+1,+5] (+0.96\%, $p$=0.010). The market processes the disclosed information efficiently and in the correct direction only after the information becomes public.
+
+We note that our direction test has limited power against small effects: with $N$=584, the test has only 30.5\% power to detect a true accuracy of 53\%, though it has 99.8\% power to detect 60\% accuracy. Thus, we cannot rule out a small degree of directional information leakage, but any such leakage would be economically modest.
 
 \subsection{Robustness: Market-Adjusted vs.\ Market Model}
 
@@ -247,7 +251,31 @@ Window & CAR (\%) & $p$-value & CAR (\%) & $p$-value \\
 
 \subsection{Abnormal Trading Volume}
 
-Abnormal trading volume begins to increase from Day~$-$3 (1.05$\times$, $p$=0.004), intensifying on Day~$-$1 (1.15$\times$, $p$<0.001), and peaks on Day~+1 (1.71$\times$). The pre-disclosure volume increase suggests heightened trading activity, but given the absence of directional information in pre-disclosure returns, this likely reflects anticipatory positioning and uncertainty resolution rather than informed trading based on leaked information.
+Table~\ref{tab:volume} presents abnormal volume ratios. Volume begins increasing from Day~$-$3 (1.05$\times$, $p$=0.004), intensifying on Day~$-$1 (1.15$\times$, $p$<0.001), and peaks on Day~+1 (1.71$\times$, $p$<0.001). Given the absence of directional information in pre-disclosure returns, the pre-disclosure volume increase likely reflects anticipatory positioning and uncertainty resolution rather than informed trading based on leaked information.
+
+\begin{table}[H]
+\centering
+\caption{Abnormal Volume Ratios by Event Day}
+\label{tab:volume}
+\begin{tabular}{lrrrrl}
+\toprule
+Day & Avg.\ Volume Ratio & $t$-stat & $p$-value & $N$ & Sig. \\
+\midrule
+$-$5 & 1.01 & 1.02 & 0.308 & 2,221 & \\
+$-$4 & 1.03 & 1.66 & 0.097 & 2,221 & \\
+$-$3 & 1.05 & 2.92 & 0.004 & 2,221 & ** \\
+$-$2 & 1.04 & 2.43 & 0.015 & 2,221 & * \\
+$-$1 & 1.15 & 6.23 & $<$0.001 & 2,221 & *** \\
+\midrule
+0 & 1.51 & 15.14 & $<$0.001 & 2,221 & *** \\
++1 & 1.71 & 19.14 & $<$0.001 & 2,221 & *** \\
++2 & 1.33 & 11.80 & $<$0.001 & 2,221 & *** \\
++3 & 1.18 & 9.88 & $<$0.001 & 2,221 & *** \\
++4 & 1.14 & 7.51 & $<$0.001 & 2,221 & *** \\
++5 & 1.15 & 6.82 & $<$0.001 & 2,221 & *** \\
+\bottomrule
+\end{tabular}
+\end{table}
 
 \begin{figure}[H]
 \centering
@@ -255,6 +283,31 @@ Abnormal trading volume begins to increase from Day~$-$3 (1.05$\times$, $p$=0.00
 \caption{Abnormal trading volume around earnings disclosures. Volume increases before disclosure but, combined with the non-directional nature of pre-disclosure returns, likely reflects anticipatory positioning rather than informed trading.}
 \label{fig:volume}
 \end{figure}
+
+\subsection{Robustness: Clustered Standard Errors}
+
+Table~\ref{tab:cluster} reports $t$-statistics under alternative standard error specifications. Pre-disclosure drift remains significant under firm-clustered standard errors (CAR[-5,$-$1]: $t$=3.92, $p$<0.001). Under month-clustered standard errors, which account for cross-sectional correlation from earnings announcements clustering in calendar time, CAR[-5,$-$1] remains significant ($t$=2.15, $p$=0.032) but CAR[-3,$-$1] becomes marginally insignificant ($t$=1.80, $p$=0.072). This suggests that some of the parametric significance may be inflated by event clustering, further supporting our conclusion that the pre-disclosure drift is less robust than standard tests suggest.
+
+\begin{table}[H]
+\centering
+\caption{Clustered Standard Errors}
+\label{tab:cluster}
+\begin{tabular}{lrrrrrr}
+\toprule
+& \multicolumn{2}{c}{Standard} & \multicolumn{2}{c}{Firm-clustered} & \multicolumn{2}{c}{Month-clustered} \\
+\cmidrule(lr){2-3} \cmidrule(lr){4-5} \cmidrule(lr){6-7}
+Window & $t$ & $p$ & $t$ & $p$ & $t$ & $p$ \\
+\midrule
+CAR[-5,$-$1] & 4.38 & $<$0.001 & 3.92 & $<$0.001 & 2.15 & 0.032 \\
+CAR[-3,$-$1] & 3.47 & $<$0.001 & 2.95 & 0.003 & 1.80 & 0.072 \\
+CAR[0,+1] & $-$0.31 & 0.760 & $-$0.25 & 0.802 & $-$0.18 & 0.861 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Selection Bias Assessment}
+
+Our earnings surprise analysis relies on 584 parseable events (26.4\% of the sample). To assess potential selection bias, we compare the parseable and non-parseable subsamples. Pre-disclosure CARs are not significantly different between groups (CAR[-3,$-$1]: $p$=0.147; CAR[-5,$-$1]: $p$=0.331). However, parseable events come from larger firms (mean log volume 13.47 vs.\ 12.97, $p$<0.001) with lower beta (0.83 vs.\ 0.99, $p$<0.001). The year distribution is balanced across subsamples. While the CAR similarity is reassuring, the size and beta differences mean that our surprise-direction results should be interpreted as applying primarily to larger, lower-beta chaebol affiliates.
 
 \subsection{Temporal and Cross-Sectional Heterogeneity}
 
@@ -272,9 +325,9 @@ Cross-sectional OLS regression of CAR[-3,$-$1] on log(size) and market beta yiel
 \section{Discussion}
 \label{sec:discussion}
 
-\subsection{Resolving the Paradox: Drift Without Leakage}
+\subsection{Drift Without Directional Leakage}
 
-Our results resolve an apparent paradox. Significant pre-disclosure abnormal returns exist under parametric tests, which might suggest information leakage. However, three complementary tests demonstrate otherwise:
+A natural concern is that significant pre-disclosure abnormal returns indicate information leakage. However, three complementary tests suggest the drift is non-directional:
 
 \begin{enumerate}
 \item \textbf{Direction test}: Pre-disclosure drift does not predict surprise direction (49.0\% accuracy).
@@ -284,9 +337,9 @@ Our results resolve an apparent paradox. Significant pre-disclosure abnormal ret
 
 The pre-disclosure drift observed in parametric tests appears driven by a small number of events with large positive abnormal returns, possibly reflecting: (1) company-specific news unrelated to earnings (e.g., M\&A rumors, analyst upgrades), (2) general market momentum affecting the cross-section asymmetrically, or (3) anticipatory trading based on publicly available signals that does not carry directional information about the specific earnings outcome.
 
-\subsection{Evidence That Fair Disclosure Works}
+\subsection{Evidence Consistent with Fair Disclosure Effectiveness}
 
-The most compelling evidence for Fair Disclosure effectiveness comes from the surprise-direction analysis. Event-day CARs respond sharply and correctly to the earnings news: a +1.28 percentage point spread between positive and negative surprises ($p$<0.001). This clean separation indicates that the market does not know the sign of the earnings news before the official disclosure. If information were leaking, we would expect this separation to manifest in the pre-disclosure period, which it does not.
+The most compelling evidence comes from the surprise-direction analysis. Post-disclosure Day~+1 returns respond sharply and correctly to the earnings news: a +1.13 percentage point spread between positive and negative surprises ($p$<0.001), with 60.6\% direction accuracy. This clean separation on the first post-disclosure trading day, contrasted with the absence of directional separation in pre-disclosure returns, is consistent with the hypothesis that material earnings information is not systematically leaking before the official DART filing. However, we acknowledge that this evidence is consistent with, rather than proof of, regulatory effectiveness. Alternative explanations---such as the possibility that leakage occurs through channels not captured by our YoY surprise measure---cannot be excluded.
 
 \subsection{Filing Time Implications}
 
@@ -299,9 +352,9 @@ Several limitations warrant acknowledgment. First, our earnings surprise measure
 \section{Conclusion}
 \label{sec:conclusion}
 
-This study provides evidence that South Korea's Fair Disclosure regulation effectively prevents directional information leakage in earnings announcements. While statistically significant pre-disclosure abnormal returns exist under parametric tests, three complementary analyses---direction prediction, non-parametric tests, and surprise conditioning---demonstrate that this drift is non-directional noise rather than evidence of selective information leakage.
+This study finds no evidence of directional information leakage in Korean earnings announcements, despite the presence of statistically significant pre-disclosure abnormal returns. Three complementary analyses---direction prediction (49.0\% accuracy), non-parametric tests (sign test $p$=0.585), and surprise conditioning ($p$=0.703)---demonstrate that pre-disclosure drift does not carry directional information about the forthcoming earnings news. In contrast, the first post-disclosure trading day shows a strong and correctly signed response to earnings surprises (60.6\% direction accuracy, $p$<0.001), consistent with efficient information incorporation following public release.
 
-The market's response to the actual earnings news is sharp, correctly signed, and concentrated around the disclosure date, consistent with efficient information incorporation following public release. These findings suggest that, more than two decades after its implementation, Korea's Fair Disclosure regime continues to serve its intended purpose of ensuring equitable access to material corporate information.
+These findings are consistent with---though do not definitively prove---the continued effectiveness of Korea's Fair Disclosure regime. We cannot rule out small-scale directional leakage given the limited power of our test (30.5\% power at 53\% true accuracy) and the crude nature of our earnings surprise measure. Nonetheless, the sharp contrast between non-directional pre-disclosure drift and highly directional post-disclosure reactions provides the strongest available evidence that material earnings information is not systematically incorporated into prices before its public release through DART.
 
 Our results carry a broader methodological lesson: the existence of pre-announcement drift should not be conflated with evidence of information leakage. Without conditioning on the direction of the actual news, event study evidence of pre-disclosure price movement is insufficient to draw conclusions about regulatory effectiveness.
 
