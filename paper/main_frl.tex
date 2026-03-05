@@ -52,7 +52,7 @@ Filing time analysis reveals that 96.5\% of filings carry the ``800'' prefix (af
 
 \subsection{Market Model and Surprise Measure}
 
-We employ the market model with a [-250,$-$30] estimation window \citep{mackinlay1997event}, yielding 2,208 events with valid estimates (average $\beta$=0.978). Earnings surprises are measured by year-over-year (YoY) operating profit changes extracted from disclosure texts. This crude but transparent measure captures directional content; comprehensive analyst consensus data are not freely available for Korean firms over our sample period \citep{livnat2006comparing}. Of 2,208 events, 584 (26.4\%) have parseable surprise data (358 positive, 226 negative).
+We employ the market model with a [-250,$-$30] estimation window \citep{mackinlay1997event}, yielding 2,208 events with valid estimates (average $\beta$=0.978). Earnings surprises are measured by year-over-year (YoY) operating profit changes extracted from disclosure texts. This crude but transparent measure captures directional content; comprehensive analyst consensus data are not freely available for Korean firms over our sample period \citep{livnat2006comparing}. Of 2,208 events, 584 (26.4\%) have parseable surprise data (358 positive, 226 negative); unparseable cases primarily involve missing comparative periods, newly listed firms, or format variations in disclosure texts.
 
 \subsection{Statistical Tests}
 
@@ -71,16 +71,16 @@ Under month-clustered standard errors, CAR[-5,$-$1] remains significant ($t$=2.1
 \begin{threeparttable}
 \caption{Cumulative Abnormal Returns: Multi-Test Comparison}
 \label{tab:car}
-\begin{tabular}{lrrrrrrr}
+\begin{tabular}{lrrrrrr}
 \toprule
-& & \multicolumn{2}{c}{Parametric} & \multicolumn{2}{c}{Sign Test} & \multicolumn{2}{c}{Wilcoxon} \\
-\cmidrule(lr){3-4} \cmidrule(lr){5-6} \cmidrule(lr){7-8}
-Window & CAR (\%) & $t$ & $p$ & \% Pos & $p$ & $W$ & $p$ \\
+& & \multicolumn{2}{c}{Parametric} & \multicolumn{2}{c}{Sign Test} & {Wilcoxon} \\
+\cmidrule(lr){3-4} \cmidrule(lr){5-6} \cmidrule(lr){7-7}
+Window & CAR (\%) & $t$ & $p$ & \% Pos & $p$ & $p$ \\
 \midrule
-{[}$-$5,$-$1{]} & 0.519 & 4.65 & $<$0.001 & 49.4 & 0.585 & & 0.142 \\
-{[}$-$3,$-$1{]} & 0.347 & 4.04 & $<$0.001 & 48.1 & 0.060 & & 0.946 \\
-{[}0, +1{]} & $-$0.042 & $-$0.39 & 0.700 & 47.0 & 0.003 & & 0.019 \\
-{[}+1, +5{]} & $-$0.268 & $-$2.16 & 0.031 & 47.7 & 0.021 & & 0.078 \\
+{[}$-$5,$-$1{]} & 0.519 & 4.65 & $<$0.001 & 49.4 & 0.585 & 0.142 \\
+{[}$-$3,$-$1{]} & 0.347 & 4.04 & $<$0.001 & 48.1 & 0.060 & 0.946 \\
+{[}0, +1{]} & $-$0.042 & $-$0.39 & 0.700 & 47.0 & 0.003 & 0.019 \\
+{[}+1, +5{]} & $-$0.268 & $-$2.16 & 0.031 & 47.7 & 0.021 & 0.078 \\
 \bottomrule
 \end{tabular}
 \begin{tablenotes}
@@ -141,7 +141,7 @@ Results are robust to: (i) market-adjusted returns ($\alpha$=0, $\beta$=1); (ii)
 
 We find no evidence of directional information leakage in Korean earnings announcements. Three complementary tests---direction prediction (49.0\% accuracy), non-parametric tests (sign test $p$=0.585), and surprise conditioning ($p$=0.703)---demonstrate that pre-disclosure drift is non-directional. The first post-disclosure trading day shows strong directional response (60.6\% accuracy, $p$<0.001), consistent with effective fair disclosure.
 
-Our results carry a methodological lesson: pre-announcement drift should not be conflated with information leakage without conditioning on the direction of the actual news \citep{meulbroek1992comparison, bernile2016can, atiase1985predisclosure}. Future work should examine non-chaebol firms and incorporate analyst consensus surprises for a more comprehensive assessment.
+Several limitations warrant acknowledgment: our YoY surprise measure is crude compared to analyst consensus forecasts, the sample is limited to large chaebol affiliates, and Korean Fama-French factors are unavailable for our sample period. Nonetheless, our results carry a methodological lesson: pre-announcement drift should not be conflated with information leakage without conditioning on the direction of the actual news \citep{meulbroek1992comparison, bernile2016can, atiase1985predisclosure}. Future work should examine non-chaebol firms and incorporate analyst consensus surprises.
 
 \section*{CRediT authorship contribution statement}
 \textbf{Yongjun Kim:} Conceptualization, Methodology, Software, Formal analysis, Investigation, Data curation, Writing -- original draft, Visualization.
