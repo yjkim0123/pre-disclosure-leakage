@@ -141,6 +141,15 @@ $-$1 & 0.256 & 4.57 & $<$0.001 & 50.1 & 0.909 & 0.089 & $<$0.001 \\
 \end{flushleft}
 \end{table}
 
+Figure~\ref{fig:ar_car} visualizes this pattern: while the cumulative AR line trends upward before disclosure, individual daily ARs show no consistent direction.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.85\columnwidth]{figures/fig1_ar_car.pdf}
+\caption{Daily abnormal returns (bars) and cumulative abnormal returns (line) around earnings disclosures ($N$=2,208). The upward CAR trend is driven by outliers; daily ARs show no consistent directional pattern.}
+\label{fig:ar_car}
+\end{figure}
+
 Table~\ref{tab:car} confirms this pattern at the cumulative level. While the parametric CAR[-5,$-$1] is +0.519\% ($t$=4.65), the sign test shows only 49.4\% of events have positive pre-disclosure CARs ($p$=0.585), and the Wilcoxon test is insignificant ($p$=0.142).
 
 Notably, the CAR[0,+1] window shows a significantly negative sign test result: only 47.0\% of events have positive CARs ($p$=0.003). This asymmetry is consistent with the well-documented negativity bias in earnings reactions \cite{skinner1994investment}.
@@ -249,13 +258,29 @@ Our surprise analysis relies on 584 parseable events (26.4\%). Pre-disclosure CA
 
 \subsection{Temporal Heterogeneity}
 
-We observe a structural shift in event-day CARs: positive during 2020--2022 (COVID-19 recovery) and negative during 2024--2026. A significant quarterly pattern emerges, with Q1 disclosures generating negative CARs ($-$0.51\%, $p$=0.010) and Q2 generating positive CARs (+0.60\%, $p$=0.003). Cross-sectional OLS of CAR[-3,$-$1] on log(size) and beta yields $R^2=0.002$, confirming that firm characteristics explain virtually none of the pre-disclosure drift.
+We observe a structural shift in event-day CARs: positive during 2020--2022 (COVID-19 recovery) and negative during 2024--2026 (Figure~\ref{fig:year}). A significant quarterly pattern emerges, with Q1 disclosures generating negative CARs ($-$0.51\%, $p$=0.010) and Q2 generating positive CARs (+0.60\%, $p$=0.003), as shown in Figure~\ref{fig:quarter}. Cross-sectional OLS of CAR[-3,$-$1] on log(size) and beta yields $R^2=0.002$, confirming that firm characteristics explain virtually none of the pre-disclosure drift.
+
+Figure~\ref{fig:dist} shows the distribution of individual-event CARs, illustrating the positive skewness that drives the parametric significance despite a near-zero median.
 
 \begin{figure}[h]
 \centering
 \includegraphics[width=0.85\columnwidth]{figures/fig3_year.pdf}
-\caption{Pre-disclosure CAR[-3,$-$1] and event-day CAR[0,+1] by year.}
+\caption{Pre-disclosure CAR[-3,$-$1] and event-day CAR[0,+1] by year. The temporal shift reflects macroeconomic conditions rather than changes in information leakage.}
 \label{fig:year}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.85\columnwidth]{figures/fig4_quarter.pdf}
+\caption{CARs by fiscal quarter. Q1 disclosures generate negative event-day CARs while Q2 generates positive, suggesting seasonal earnings patterns.}
+\label{fig:quarter}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.85\columnwidth]{figures/fig5_distributions.pdf}
+\caption{Distribution of individual-event CARs for the [-5,$-$1] window. The positive mean (+0.52\%) is driven by right-tail outliers; the median is near zero, consistent with non-directional drift.}
+\label{fig:dist}
 \end{figure}
 
 \section{Discussion}
