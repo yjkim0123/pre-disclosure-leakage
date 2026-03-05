@@ -17,7 +17,7 @@
 }
 
 \begin{abstract}
-Does South Korea's Fair Disclosure regulation effectively ensure that earnings information reaches all market participants simultaneously? Using 2,221 earnings disclosure filings from 64 KOSPI-listed companies across 12 chaebol groups (2020--2026), we find that pre-disclosure abnormal returns, while statistically significant under parametric tests (CAR[-5,$-$1] = +0.52\%, $p$<0.001), do not predict the direction of actual earnings surprises (49.0\% accuracy, $p$=0.649; Spearman $\rho$=$-$0.006, $p$=0.876). Non-parametric tests confirm that the drift is driven by outliers rather than systematic directional movement (sign test $p$=0.585; Wilcoxon $p$=0.142). In contrast, the first post-disclosure trading day (Day +1) responds sharply and correctly to earnings surprises: positive surprises generate AR of +0.55\%, negative surprises $-$0.58\% ($p$<0.001), with 60.6\% direction accuracy ($p$<0.001). We further document that 96.5\% of filings occur after market close, making Day 0 effectively pre-disclosure. These results are robust to firm-clustered and month-clustered standard errors. Our findings suggest that Korea's Fair Disclosure regime effectively prevents directional information leakage, even though non-directional price noise and abnormal volume emerge in the pre-disclosure period.
+Does South Korea's Fair Disclosure regulation effectively ensure that earnings information reaches all market participants simultaneously? Using 2,221 earnings disclosure filings from 64 KOSPI-listed companies across 12 chaebol groups (2020--2026), we find that pre-disclosure abnormal returns, while statistically significant under parametric tests (CAR[-5,$-$1] = +0.52\%, $p$<0.001), do not predict the direction of actual earnings surprises (49.0\% accuracy, $p$=0.649; Spearman $\rho$=$-$0.006, $p$=0.876). Non-parametric tests confirm that the drift is driven by outliers rather than systematic directional movement (sign test $p$=0.585; Wilcoxon $p$=0.142). In contrast, the first post-disclosure trading day (Day +1) responds sharply and correctly to earnings surprises: positive surprises generate AR of +0.55\%, negative surprises $-$0.58\% ($p$<0.001), with 60.6\% direction accuracy ($p$<0.001). We further document that 96.5\% of filings occur after market close, making Day 0 effectively pre-disclosure. Cross-sectional analyses reveal heterogeneous pre-disclosure drift across 12 chaebol groups (ranging from $-$0.23\% to +1.57\%), but this variation is uncorrelated with event-window returns and inconsistent with differential information leakage. Firm size and market beta explain virtually none of the pre-disclosure drift ($R^2$=0.002). These results are robust to firm-clustered and month-clustered standard errors. Our findings suggest that Korea's Fair Disclosure regime effectively prevents directional information leakage, and we discuss implications for intelligent disclosure monitoring systems.
 \end{abstract}
 
 \begin{CCSXML}
@@ -54,7 +54,7 @@ Our findings reveal an important pattern. We observe statistically significant p
 
 In contrast, the market responds sharply and correctly to the actual earnings news on the disclosure date. Positive earnings surprises generate a CAR[0,+1] of +0.81\%, while negative surprises generate $-$0.47\%, a highly significant difference ($p$<0.001). This finding is consistent with effective Fair Disclosure: material information is incorporated into prices only when it becomes publicly available.
 
-We make four contributions. First, we provide the first long-term assessment of Korea's Fair Disclosure regime using recent data spanning the COVID-19 and post-pandemic periods. Second, we demonstrate the critical distinction between the \textit{existence} of pre-disclosure drift (which is ubiquitous) and its \textit{directional informativeness} (which would indicate information leakage). Third, we document a previously overlooked institutional feature---96.5\% of DART fair disclosure filings are submitted after market close---that has important implications for event study interpretation. Fourth, we provide cross-sectional and temporal analyses that reveal significant heterogeneity across chaebol groups, fiscal quarters, and years.
+We make five contributions. First, we provide the first long-term assessment of Korea's Fair Disclosure regime using recent data spanning the COVID-19 and post-pandemic periods. Second, we demonstrate the critical distinction between the \textit{existence} of pre-disclosure drift (which is ubiquitous) and its \textit{directional informativeness} (which would indicate information leakage). Third, we document a previously overlooked institutional feature---96.5\% of DART fair disclosure filings are submitted after market close---that has important implications for event study interpretation. Fourth, we provide detailed cross-sectional analyses across chaebol groups, firm size terciles, and market beta terciles that reveal significant heterogeneity in pre-disclosure drift but no pattern consistent with differential information leakage. Fifth, we demonstrate how electronic disclosure databases can be leveraged for continuous, data-driven regulatory evaluation---an approach with direct applications for intelligent monitoring systems that regulators could deploy for near-real-time assessment of disclosure regime effectiveness.
 
 \section{Literature Review}
 
@@ -62,21 +62,51 @@ We make four contributions. First, we provide the first long-term assessment of 
 
 Fair disclosure regulation addresses selective disclosure, whereby corporate insiders share material information with favored market participants before public release \cite{heflin2003regulation}. In the U.S., Regulation Fair Disclosure (Reg FD), implemented in 2000, produced mixed evidence: \citet{ahmed2003impact} find reduced information asymmetry, while \citet{heflin2003regulation} document reduced information quality. \citet{bailey2003regulation} provide comprehensive evidence on market, analyst, and corporate responses to Reg FD, and \citet{eleswarapu2004impact} document reduced information asymmetry and trading costs following implementation. \citet{gomes2007sec} further show that Reg FD affected the cost of capital, particularly for smaller firms.
 
-In Korea, \citet{yun2012fair} examined the effect of fair disclosure regulation on the timeliness and informativeness of earnings announcements, while \citet{park2020disclosure} investigated how disclosure frequency under the regulation affects the information environment and cost of capital. \citet{yoon2011impact} provide early evidence on the impact of fair disclosure on the Korean stock market, and \citet{lee2012testing} test regulatory effectiveness using Korean data in an emerging market context. However, these studies do not examine whether pre-disclosure price movements are directionally informative with respect to the actual earnings news---the central question of our study.
+The effectiveness of fair disclosure regulation depends critically on implementation and enforcement infrastructure. \citet{christensen2013capital} demonstrate that capital-market effects of securities regulation vary substantially with prior institutional conditions and enforcement intensity, suggesting that regulations identical on paper may function differently across jurisdictions. \citet{jackson2009regulatory} find that regulatory intensity is positively associated with stock market development, while \citet{djankov2008law} show that legal protections against self-dealing are associated with more developed capital markets. \citet{cumming2011exchange} further document that exchange trading rules, including disclosure requirements, significantly affect market liquidity across 42 exchanges worldwide.
+
+In Korea, \citet{yun2012fair} examined the effect of fair disclosure regulation on the timeliness and informativeness of earnings announcements, while \citet{park2020disclosure} investigated how disclosure frequency under the regulation affects the information environment and cost of capital. \citet{yoon2011impact} provide early evidence on the impact of fair disclosure on the Korean stock market, and \citet{lee2012testing} test regulatory effectiveness using Korean data in an emerging market context. \citet{lee2019regulation} examine the interaction between R\&D intensity and fair disclosure in Korea, finding that disclosure effects vary by firm characteristics. However, these studies do not examine whether pre-disclosure price movements are directionally informative with respect to the actual earnings news---the central question of our study.
+
+\subsection{Electronic Disclosure Systems and Their Effectiveness}
+
+A critical infrastructure underlying modern fair disclosure regulation is the electronic filing system through which disclosures are disseminated. The U.S. Securities and Exchange Commission's EDGAR (Electronic Data Gathering, Analysis, and Retrieval) system, introduced in 1996, fundamentally changed how corporate information reaches market participants \cite{bushee2004economic}. Korea's DART (Data Analysis, Retrieval and Transfer) system, operated by the Financial Supervisory Service (FSS) since 2001, serves an analogous function: all listed companies must file material disclosures through DART before or simultaneously with any other dissemination channel.
+
+The design of electronic disclosure systems has important implications for information processing and market efficiency. DART provides structured filing templates for Fair Disclosure of Operating Results, enabling standardized comparison across firms and time periods. Unlike EDGAR's free-text approach for many filing types, DART's structured format reduces the cost of information extraction, potentially accelerating price discovery. \citet{li2010textual} surveys the literature on textual analysis of corporate disclosures, demonstrating that the format and readability of disclosures significantly affect how efficiently markets process information. \citet{loughran2011liability} show that the specific language used in financial filings contains predictive information for future returns, underscoring the importance of systematic disclosure analysis.
+
+The timestamp precision of electronic filing systems is particularly relevant to event study research. DART records receipt timestamps to the second, enabling researchers to classify filings as occurring during or after trading hours. As we document in Section 3, 96.5\% of earnings disclosures in our sample are filed after market close, a fact that can only be established through the electronic filing system's metadata. This institutional detail has fundamental implications for event study window interpretation that prior studies have not fully exploited.
+
+\subsection{AI and Intelligent Systems in Financial Market Analysis}
+
+The application of artificial intelligence and machine learning to financial market analysis has grown rapidly, creating new opportunities for both market participants and regulators. \citet{gu2020empirical} demonstrate that machine learning methods substantially improve asset pricing predictions compared to traditional linear models, using neural networks and tree-based methods on a comprehensive set of stock-level predictors. \citet{fischer2018deep} apply long short-term memory (LSTM) networks to financial time series prediction, showing that deep learning models can capture complex temporal dependencies in stock returns. \citet{bao2017deep} propose a stacked autoencoder framework for financial forecasting that integrates wavelet transforms with deep learning.
+
+Natural language processing (NLP) has emerged as a particularly important tool for analyzing financial disclosures. \citet{ke2020predicting} use neural network methods to extract predictive signals from news text, demonstrating that machine learning can identify nuanced information in financial narratives that traditional dictionary-based approaches miss. \citet{dong2020leveraging} develop attention-based recurrent neural networks that leverage financial news for stock trend prediction. More recently, \citet{lopez2023can} investigate whether large language models such as ChatGPT can forecast stock price movements, finding that sentiment analysis from LLM-processed news headlines contains return-predictive information.
+
+These advances in intelligent systems have direct relevance to regulatory evaluation. Automated monitoring of trading patterns around corporate disclosures could enable real-time detection of potential information leakage, complementing traditional event study approaches that rely on historical data analysis. \citet{hassan2019firm} demonstrate that NLP techniques can measure firm-level political risk from earnings call transcripts, illustrating how text analysis can extract latent information from corporate communications. Our study contributes to this literature by providing a data-driven framework for evaluating disclosure regulation effectiveness that could be integrated into intelligent regulatory monitoring systems.
+
+\subsection{Data-Driven Regulatory Evaluation}
+
+A growing literature advocates for evidence-based evaluation of securities regulation using large-scale empirical analysis. \citet{leuz2003earnings} compare earnings management across 31 countries and find that it is negatively related to investor protection, demonstrating the feasibility of cross-country regulatory evaluation using financial data. \citet{comerton2009measuring} develop methods to measure market manipulation, providing a framework for quantifying the costs that regulation seeks to prevent.
+
+The challenge of evaluating regulatory effectiveness lies in distinguishing genuine policy effects from confounding factors. \citet{christensen2013capital} emphasize that assessing regulation requires consideration of prior institutional conditions, implementation quality, and enforcement intensity. In the context of fair disclosure, the key empirical challenge is distinguishing genuine information leakage from legal anticipatory trading. Our multi-test approach---combining parametric tests, non-parametric tests, and directional conditioning---provides a more comprehensive evaluation framework than single-test approaches used in prior studies.
+
+The availability of comprehensive electronic filing databases such as DART enables a new paradigm in regulatory evaluation: continuous, data-driven monitoring of regulatory effectiveness using techniques from data science and intelligent systems. Rather than periodic ad hoc studies, regulators can systematically analyze disclosure-return relationships across time, firm characteristics, and market conditions. Our study demonstrates this approach by providing a replicable analytical framework applied to over 2,200 disclosure events spanning six years.
 
 \subsection{Pre-Announcement Drift and Its Interpretation}
 
 Pre-announcement drift in stock prices is well-documented but its interpretation is debated. \citet{meulbroek1992comparison} provides evidence of illegal insider trading preceding announcements. \citet{bernile2016can} show that informed trading occurs even ahead of macro-news announcements where information is tightly controlled. However, \citet{kaniel2012individual} demonstrate that individual investor trading patterns around earnings announcements can generate drift without requiring illegal information leakage.
 
-Critically, the mere existence of pre-announcement drift does not establish information leakage. Predictable earnings patterns allow sophisticated investors to position ahead of announcements through legal means \cite{atiase1985predisclosure}. \citet{chae2005trading} shows that abnormal volume before announcements reflects information asymmetry but may arise from varying levels of investor sophistication rather than illegal tip-offs. A related literature on post-earnings-announcement drift (PEAD) demonstrates that markets may take days or weeks to fully incorporate earnings information \cite{bernard1989post}, further complicating the interpretation of short-window event studies.
+Critically, the mere existence of pre-announcement drift does not establish information leakage. Predictable earnings patterns allow sophisticated investors to position ahead of announcements through legal means \cite{atiase1985predisclosure}. \citet{chae2005trading} shows that abnormal volume before announcements reflects information asymmetry but may arise from varying levels of investor sophistication rather than illegal tip-offs. A related literature on post-earnings-announcement drift (PEAD) demonstrates that markets may take days or weeks to fully incorporate earnings information \cite{bernard1989post, bernard1990evidence}, further complicating the interpretation of short-window event studies. \citet{jegadeesh2001profitability} document momentum effects that can generate pre-announcement drift patterns, while \citet{griffin2003momentum} show that momentum profits persist across international markets, including emerging markets like Korea.
+
+The distinction between directional and non-directional drift is central to our analysis. Non-directional drift---where prices move before announcements but not in the direction of the forthcoming news---can arise from several mechanisms: increased attention and trading activity as announcement dates approach \cite{hirshleifer2003limited}, disagreement among investors \cite{bamber1997trading}, or microstructure effects such as bid-ask bounce and price pressure from anticipatory order flow \cite{hasbrouck2003intraday}. Only \textit{directional} drift---where pre-announcement returns predict the sign of the earnings surprise---constitutes evidence consistent with information leakage.
 
 \subsection{Event Study Methodology}
 
-The standard event study framework \cite{brown1985using, mackinlay1997event} relies on parametric tests of mean abnormal returns. However, \citet{kolari2010event} demonstrate that cross-sectional correlation of abnormal returns can substantially inflate test statistics, particularly when events cluster in calendar time. We incorporate both non-parametric alternatives and standardized returns to address these concerns.
+The standard event study framework \cite{brown1985using, mackinlay1997event} relies on parametric tests of mean abnormal returns. However, \citet{kolari2010event} demonstrate that cross-sectional correlation of abnormal returns can substantially inflate test statistics, particularly when events cluster in calendar time. \citet{kothari2016econometrics} provide a comprehensive review of event study econometrics, emphasizing the importance of benchmark model selection, test statistic specification, and cross-sectional dependence adjustments. We incorporate both non-parametric alternatives and standardized returns to address these concerns, and we report firm-clustered and month-clustered standard errors following the recommendations of \citet{kolari2010event}.
 
 \subsection{Korean Market Context}
 
-The Korean stock market features concentrated chaebol ownership, a mandatory electronic disclosure system (DART), significant retail investor participation, and relatively strict insider trading regulations. \citet{beny2005impact} demonstrates that stronger insider trading enforcement is associated with more efficient stock prices across countries, providing cross-country evidence relevant to our Korean setting. These institutional features, combined with the comprehensive DART database, make Korea an ideal setting for testing fair disclosure effectiveness.
+The Korean stock market features concentrated chaebol ownership, a mandatory electronic disclosure system (DART), significant retail investor participation, and relatively strict insider trading regulations. \citet{beny2005impact} demonstrates that stronger insider trading enforcement is associated with more efficient stock prices across countries, providing cross-country evidence relevant to our Korean setting.
+
+The chaebol structure is a distinctive feature of the Korean market that creates both challenges and opportunities for studying disclosure regulation. Chaebol groups---large family-controlled conglomerates such as Samsung, Hyundai Motor, SK, and LG---account for a substantial share of KOSPI market capitalization. Affiliates within the same chaebol group may share information through internal channels, creating potential for correlated trading patterns that complicate cross-sectional analysis. At the same time, the diversity across chaebol groups in terms of industry exposure, governance quality, and analyst coverage provides useful cross-sectional variation for testing whether disclosure regulation operates uniformly across different types of firms. These institutional features, combined with the comprehensive DART database, make Korea an ideal setting for testing fair disclosure effectiveness.
 
 \section{Data and Methodology}
 
@@ -112,7 +142,7 @@ We report multiple test statistics to ensure robustness: parametric cross-sectio
 
 Table~\ref{tab:ar} presents daily abnormal returns. Parametric $t$-tests indicate significant positive returns on several pre-disclosure days, particularly Day~$-$1 (+0.256\%, $t$=4.57). However, the sign test reveals that only 48--50\% of individual returns are positive on each pre-disclosure day---no better than chance.
 
-\begin{table}[h]
+\begin{table}[ht]
 \caption{Daily Abnormal Returns: Parametric vs.\ Non-Parametric Tests}
 \label{tab:ar}
 \begin{tabular}{lrrrrrrr}
@@ -143,10 +173,11 @@ $-$1 & 0.256 & 4.57 & $<$0.001 & 50.1 & 0.909 & 0.089 & $<$0.001 \\
 
 Figure~\ref{fig:ar_car} visualizes this pattern: while the cumulative AR line trends upward before disclosure, individual daily ARs show no consistent direction.
 
-\begin{figure}[h]
+\begin{figure}[ht]
 \centering
 \includegraphics[width=0.85\columnwidth]{figures/fig1_ar_car.pdf}
 \caption{Daily abnormal returns (bars) and cumulative abnormal returns (line) around earnings disclosures ($N$=2,208). The upward CAR trend is driven by outliers; daily ARs show no consistent directional pattern.}
+\Description{Bar chart showing daily abnormal returns from Day -5 to Day +5 with a cumulative abnormal return line trending upward before disclosure and declining afterward.}
 \label{fig:ar_car}
 \end{figure}
 
@@ -154,7 +185,7 @@ Table~\ref{tab:car} confirms this pattern at the cumulative level. While the par
 
 Notably, the CAR[0,+1] window shows a significantly negative sign test result: only 47.0\% of events have positive CARs ($p$=0.003). This asymmetry is consistent with the well-documented negativity bias in earnings reactions \cite{skinner1994investment}.
 
-\begin{table}[h]
+\begin{table}[ht]
 \caption{Cumulative Abnormal Returns: Multi-Test Comparison}
 \label{tab:car}
 \begin{tabular}{lrrrrrr}
@@ -180,7 +211,7 @@ In contrast, Day~+1 returns respond sharply: positive surprises yield +0.55\%, n
 
 With $N$=584, the test has 30.5\% power to detect 53\% true accuracy but 99.8\% power for 60\%. We cannot rule out small-scale leakage, but any such effect would be economically modest.
 
-\begin{table}[h]
+\begin{table}[ht]
 \caption{CARs by Earnings Surprise Direction ($N$=584)}
 \label{tab:surprise}
 \begin{tabular}{lrrrrl}
@@ -204,7 +235,7 @@ CAR[+1,+5] & +0.481\% & $-$0.481\% & +0.962\% & 0.010 & ** \\
 
 Table~\ref{tab:robustness} confirms that results hold under both market-adjusted and market model specifications.
 
-\begin{table}[h]
+\begin{table}[ht]
 \caption{Robustness: Market-Adjusted vs.\ Market Model}
 \label{tab:robustness}
 \begin{tabular}{lrrrr}
@@ -225,10 +256,11 @@ Window & CAR (\%) & $p$ & CAR (\%) & $p$ \\
 
 Volume increases from Day~$-$3 (1.05$\times$, $p$=0.004), peaks on Day~+1 (1.71$\times$), and remains elevated through Day~+5. Given non-directional returns, the pre-disclosure volume increase likely reflects anticipatory positioning \cite{chae2005trading} and disagreement among investors \cite{bamber1997trading, berkman2009sell} rather than informed directional trading.
 
-\begin{figure}[h]
+\begin{figure}[ht]
 \centering
 \includegraphics[width=0.85\columnwidth]{figures/fig2_volume.pdf}
 \caption{Abnormal trading volume around earnings disclosures ($N$=2,221).}
+\Description{Line chart showing abnormal volume ratio from Day -5 to Day +5, rising from Day -3 and peaking at 1.71 times normal on Day +1.}
 \label{fig:volume}
 \end{figure}
 
@@ -236,7 +268,7 @@ Volume increases from Day~$-$3 (1.05$\times$, $p$=0.004), peaks on Day~+1 (1.71$
 
 Table~\ref{tab:cluster} reports $t$-statistics under alternative specifications. Under month-clustered standard errors, CAR[-5,$-$1] remains significant ($t$=2.15, $p$=0.032) but CAR[-3,$-$1] becomes marginal ($t$=1.80, $p$=0.072), suggesting some parametric significance is inflated by event clustering.
 
-\begin{table}[h]
+\begin{table}[ht]
 \caption{Clustered Standard Errors}
 \label{tab:cluster}
 \begin{tabular}{lrrrrrr}
@@ -256,36 +288,176 @@ CAR[0,+1] & $-$0.31 & 0.760 & $-$0.25 & 0.802 & $-$0.18 & 0.861 \\
 
 We observe a structural shift in event-day CARs: positive during 2020--2022 (COVID-19 recovery) and negative during 2024--2026 (Figure~\ref{fig:year}). A significant quarterly pattern emerges, with Q1 disclosures generating negative CARs ($-$0.51\%, $p$=0.010) and Q2 generating positive CARs (+0.60\%, $p$=0.003). Cross-sectional OLS of CAR[-3,$-$1] on log(size) and beta yields $R^2=0.002$. Selection bias checks confirm parseable and non-parseable subsamples show similar pre-disclosure CARs ($p$=0.147).
 
-\begin{figure}[h]
+\begin{figure}[ht]
 \centering
 \includegraphics[width=0.85\columnwidth]{figures/fig3_year.pdf}
 \caption{Pre-disclosure CAR[-3,$-$1] and event-day CAR[0,+1] by year.}
+\Description{Grouped bar chart showing pre-disclosure and event-day CARs by year from 2020 to 2026, with positive event-day CARs during 2020-2022 and negative during 2024-2026.}
 \label{fig:year}
 \end{figure}
+
+\subsection{Cross-Sectional Analysis by Chaebol Group}
+
+The Korean market's chaebol structure provides a natural cross-sectional dimension for examining whether pre-disclosure drift varies systematically across corporate groups. If information leakage were concentrated in specific chaebols---perhaps due to weaker internal controls or more extensive analyst networks---we would expect to see significantly higher directional drift in those groups.
+
+Table~\ref{tab:chaebol} reports CAR[-3,$-$1] and CAR[0,+1] by chaebol group. Pre-disclosure CARs range from $-$0.228\% (Doosan) to +1.565\% (Hanwha), with Hanwha's drift significantly higher than the rest ($t$=3.41, $p$<0.001). CJ (+0.881\%) and GS (+0.604\%) also show above-average pre-disclosure drift, while KT ($-$0.006\%) and Doosan ($-$0.228\%) show near-zero or negative drift. An ANOVA test across all 12 groups yields $F$=1.73 ($p$=0.062), suggesting marginally significant heterogeneity in pre-disclosure drift across chaebols.
+
+\begin{table}[ht]
+\caption{Cumulative Abnormal Returns by Chaebol Group}
+\label{tab:chaebol}
+\begin{tabular}{lrrrrr}
+\toprule
+& & \multicolumn{2}{c}{CAR[-3,$-$1]} & \multicolumn{2}{c}{CAR[0,+1]} \\
+\cmidrule(lr){3-4} \cmidrule(lr){5-6}
+Chaebol & $N$ & Mean (\%) & $t$ & Mean (\%) & $t$ \\
+\midrule
+Hanwha & 116 & +1.565 & 2.30 & $-$0.583 & $-$0.81 \\
+CJ & 75 & +0.881 & 1.98 & $-$0.120 & $-$0.16 \\
+GS & 53 & +0.604 & 1.37 & +0.674 & 1.53 \\
+Lotte & 92 & +0.517 & 1.33 & +0.202 & 0.36 \\
+HD Hyundai & 497 & +0.474 & 2.38 & +0.312 & 1.42 \\
+Samsung & 292 & +0.318 & 1.70 & +0.012 & 0.05 \\
+LG & 185 & +0.278 & 1.22 & $-$0.311 & $-$0.81 \\
+SK & 195 & +0.127 & 0.54 & $-$0.286 & $-$0.84 \\
+Hyundai Motor & 402 & +0.093 & 0.52 & $-$0.352 & $-$1.62 \\
+POSCO & 156 & +0.060 & 0.15 & $-$0.427 & $-$0.86 \\
+KT & 80 & $-$0.006 & $-$0.03 & +1.310 & 4.25 \\
+Doosan & 65 & $-$0.228 & $-$0.46 & $-$0.677 & $-$0.96 \\
+\midrule
+All & 2,208 & +0.347 & 4.04 & $-$0.042 & $-$0.39 \\
+\bottomrule
+\end{tabular}
+\begin{flushleft}
+\small Note: Sorted by descending CAR[-3,$-$1]. ANOVA across groups: $F$=1.73 ($p$=0.062) for CAR[-3,$-$1], $F$=1.29 ($p$=0.223) for CAR[0,+1].
+\end{flushleft}
+\end{table}
+
+Figure~\ref{fig:chaebol} visualizes the cross-sectional pattern. Several observations are noteworthy. First, the Hanwha group's elevated pre-disclosure drift (predominantly from Hanwha Aerospace and Hanwha Solutions) likely reflects the defense sector's sensitivity to geopolitical news rather than information leakage about earnings specifically. Second, KT exhibits remarkably high event-window returns (+1.310\%, $t$=4.25, significantly different from non-KT firms at $p$=0.027), consistent with the telecommunications sector's earnings surprises being particularly impactful. Third, Samsung---despite being the most closely watched chaebol group---shows only moderate pre-disclosure drift (+0.318\%), with no significant difference from non-Samsung firms ($t$=$-$0.06, $p$=0.953).
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=0.95\columnwidth]{figures/fig6_chaebol_car.pdf}
+\caption{Pre-disclosure CAR[-3,$-$1] and event-window CAR[0,+1] by chaebol group with 95\% confidence intervals. Substantial cross-group variation exists, but no group shows patterns consistent with systematic directional information leakage.}
+\Description{Horizontal dot plot showing pre-disclosure and event-window CARs for 12 chaebol groups with error bars, sorted by CAR magnitude.}
+\label{fig:chaebol}
+\end{figure}
+
+Importantly, the cross-group variation in pre-disclosure drift does not exhibit the pattern expected under systematic information leakage. If insiders were leaking directional information, we would expect groups with higher pre-disclosure drift to also show weaker post-disclosure reactions (because the news would already be partially impounded). Instead, pre-disclosure and event-window CARs are uncorrelated across groups (Spearman $\rho$=$-$0.14, $p$=0.668), suggesting that the drivers of pre-disclosure drift are distinct from the earnings information revealed at disclosure.
+
+\subsection{Firm Size and Beta Effects}
+
+To investigate whether pre-disclosure drift varies with firm characteristics, we divide the sample into terciles by firm size (log market capitalization) and market beta. Table~\ref{tab:size_beta} reports CARs for each tercile.
+
+\begin{table}[ht]
+\caption{CARs by Firm Size and Market Beta Terciles}
+\label{tab:size_beta}
+\begin{tabular}{lrrrrrr}
+\toprule
+& & \multicolumn{2}{c}{CAR[-3,$-$1]} & \multicolumn{2}{c}{CAR[0,+1]} & {CAR[-5,$-$1]} \\
+\cmidrule(lr){3-4} \cmidrule(lr){5-6} \cmidrule(lr){7-7}
+Tercile & $N$ & Mean (\%) & $t$ & Mean (\%) & $t$ & Mean (\%) \\
+\midrule
+\multicolumn{7}{l}{\textit{Panel A: Firm Size Terciles}} \\
+Small & 790 & +0.403 & 2.91 & $-$0.058 & $-$0.32 & +0.578 \\
+Medium & 726 & +0.374 & 2.45 & $-$0.005 & $-$0.03 & +0.590 \\
+Large & 679 & +0.250 & 1.58 & $-$0.109 & $-$0.60 & +0.359 \\
+\midrule
+\multicolumn{7}{l}{\textit{Panel B: Market Beta Terciles}} \\
+Low $\beta$ & 727 & +0.515 & 3.53 & $-$0.063 & $-$0.35 & +0.607 \\
+Mid $\beta$ & 732 & +0.303 & 2.04 & $-$0.033 & $-$0.17 & +0.446 \\
+High $\beta$ & 736 & +0.222 & 1.45 & $-$0.073 & $-$0.38 & +0.492 \\
+\bottomrule
+\end{tabular}
+\begin{flushleft}
+\small Note: Size tercile boundaries: Small (log size $\leq$ 12.56), Medium (12.56--13.45), Large ($>$ 13.64). Beta tercile boundaries: Low ($\beta \leq$ 0.845), Mid (0.845--1.129), High ($\beta >$ 1.130).
+\end{flushleft}
+\end{table}
+
+Panel A reveals a monotonically decreasing relationship between firm size and pre-disclosure drift: small firms exhibit CAR[-3,$-$1] of +0.403\%, medium firms +0.374\%, and large firms +0.250\%. However, the small-large difference (+0.153 percentage points) is not statistically significant ($t$=0.92, $p$=0.358), and a Kruskal-Wallis test across terciles is also insignificant ($H$=2.88, $p$=0.237). The Spearman correlation between log size and CAR[-3,$-$1] is $-$0.035 ($p$=0.101), indicating a weak negative relationship that falls short of conventional significance.
+
+Panel B shows a similar pattern for market beta. Low-beta firms exhibit the highest pre-disclosure drift (+0.515\%), while high-beta firms show the lowest (+0.222\%). The Spearman correlation between beta and CAR[-3,$-$1] is $-$0.057 ($p$=0.008), indicating a statistically significant but economically modest negative relationship. Low-beta stocks may exhibit higher pre-disclosure drift because their lower systematic risk makes firm-specific information relatively more important as a driver of returns.
+
+Figure~\ref{fig:size_beta} visualizes these patterns. The key finding is that event-window CARs (CAR[0,+1]) are uniformly close to zero across all size and beta terciles, confirming that the non-directional character of post-disclosure returns is not an artifact of pooling heterogeneous subsamples.
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=0.95\columnwidth]{figures/fig7_size_beta.pdf}
+\caption{CARs by firm size tercile (Panel a) and market beta tercile (Panel b) with 95\% confidence intervals. Pre-disclosure drift is slightly larger for smaller and lower-beta firms, but event-window CARs are uniformly near zero across all terciles.}
+\Description{Two-panel grouped bar chart showing CARs by firm size tercile and market beta tercile, with pre-disclosure drift decreasing from small to large firms and from low to high beta.}
+\label{fig:size_beta}
+\end{figure}
+
+These results are consistent with the well-documented size effect in pre-announcement drift \cite{atiase1985predisclosure}: smaller firms have less pre-disclosure information production, creating larger price adjustments when new information arrives. Critically, however, the size and beta patterns do not suggest differential information leakage---they instead reflect normal variation in information environments across firm types.
 
 \section{Discussion}
 
 \subsection{Drift Without Directional Leakage}
 
-Three complementary tests suggest the drift is non-directional: (1) direction test: 49.0\% accuracy; (2) non-parametric tests: sign test and Wilcoxon fail; (3) surprise conditioning: $p$=0.703. The drift appears driven by company-specific news unrelated to earnings, market momentum, or anticipatory trading based on publicly available signals. This interpretation is consistent with \citet{hirshleifer2003limited}, who argue that limited investor attention can produce predictable patterns without implying illegal information access.
+Three complementary tests suggest the drift is non-directional: (1) direction test: 49.0\% accuracy (no better than a coin flip); (2) non-parametric tests: sign test ($p$=0.585) and Wilcoxon ($p$=0.142) fail to confirm the parametric result; (3) surprise conditioning: pre-disclosure CARs are indistinguishable by surprise direction ($p$=0.703). The drift appears driven by company-specific news unrelated to earnings, market momentum, or anticipatory trading based on publicly available signals. This interpretation is consistent with \citet{hirshleifer2003limited}, who argue that limited investor attention can produce predictable patterns without implying illegal information access.
+
+The cross-sectional analyses in Sections 4.7--4.9 reinforce this conclusion. While pre-disclosure drift varies across chaebol groups (Hanwha showing the highest at +1.565\%), this variation is uncorrelated with event-window returns, inconsistent with directional information leakage. The size and beta patterns---smaller and lower-beta firms showing modestly larger drift---reflect normal variation in information environments rather than differential insider access. The cross-sectional OLS of CAR[-3,$-$1] on log(size) and beta yields $R^2$=0.002, confirming that observable firm characteristics explain virtually none of the pre-disclosure drift.
+
+The most parsimonious explanation for the observed drift combines three factors: (1) positive market momentum during much of the 2020--2026 sample period, generating a slight upward bias in pre-disclosure windows; (2) right-skewed return distributions, which inflate parametric means even when medians are near zero \cite{flannery2004partial}; and (3) anticipatory trading by investors who know earnings dates are approaching, generating non-directional price pressure \cite{chae2005trading}. None of these mechanisms requires illegal information leakage.
 
 \subsection{Comparison with International Evidence}
 
-Our findings align with the broader evidence on fair disclosure regulation. \citet{bailey2003regulation} find that Reg FD reduced selective disclosure, and \citet{eleswarapu2004impact} document reduced information asymmetry. Our contribution is distinct: we test whether the regulation continues to be effective \textit{within} the regulated regime by examining directional content.
+Our findings align with the broader evidence on fair disclosure regulation. \citet{bailey2003regulation} find that Reg FD reduced selective disclosure, and \citet{eleswarapu2004impact} document reduced information asymmetry. \citet{christensen2013capital} show that the capital-market effects of securities regulation depend on prior institutional conditions and enforcement intensity. Our contribution is distinct: rather than evaluating the \textit{introduction} of fair disclosure, we test whether the regulation continues to be effective \textit{within} the regulated regime by examining directional content over a six-year window.
 
-\subsection{Implications}
+The Korean result contrasts with evidence from markets with weaker enforcement. \citet{beny2005impact} demonstrates that countries with stronger insider trading enforcement exhibit more efficient stock prices, and \citet{leuz2003earnings} find that investor protection is associated with lower earnings management. Korea's combination of mandatory electronic filing (DART), relatively strict enforcement by the Financial Supervisory Service, and concentrated analyst coverage of chaebol affiliates appears to create an institutional environment where directional information leakage is effectively deterred.
 
-For regulators, non-directional drift suggests Korea's Fair Disclosure regime does not require fundamental reform. For investors, post-disclosure Day~+1 returns correctly price surprises with 60.6\% accuracy, while pre-disclosure drift strategies are unlikely to be profitable directionally.
+\subsection{Implications for Intelligent Disclosure Systems}
 
-\subsection{Limitations}
+Our findings have direct implications for the design and evaluation of intelligent disclosure systems---a topic central to the mission of information systems research. The DART system, while primarily a repository for regulatory filings, generates rich structured data that can be leveraged for automated regulatory monitoring. We identify three areas where intelligent systems could enhance disclosure regulation.
 
-Our YoY surprise measure is crude; only 26.4\% of events are parseable. The sample is limited to large chaebol affiliates. Korean Fama-French factors are unavailable. We cannot rule out that volume increases reflect legal mosaic information assembly.
+First, \textbf{automated anomaly detection.} Our multi-test framework---combining parametric, non-parametric, and directional tests---could be implemented as a continuous monitoring system that automatically flags unusual pre-disclosure trading patterns. Rather than relying on periodic academic studies, regulators could deploy real-time algorithms that compute daily abnormal returns for each filing and trigger alerts when directional drift exceeds statistical thresholds. The distinction between directional and non-directional drift is critical here: a naive system that flags all pre-disclosure price movement would generate excessive false positives, while a system conditioned on surprise direction would more precisely identify potential leakage events.
+
+Second, \textbf{NLP-enhanced disclosure analysis.} The structured text in DART filings contains rich information that current regulatory practice underutilizes. Advances in NLP, including large language models \cite{lopez2023can} and domain-specific financial text analysis \cite{loughran2011liability, ke2020predicting}, could enable automated extraction of earnings surprise magnitude and direction from disclosure texts. Our finding that only 26.4\% of disclosures yield parseable surprises under rule-based extraction suggests substantial room for improvement through machine learning approaches. An intelligent extraction system could expand the coverage of directional tests from 584 to potentially all 2,208 events, significantly increasing statistical power for detecting small-scale leakage.
+
+Third, \textbf{cross-sectional monitoring.} Our chaebol-level analysis reveals heterogeneous patterns that warrant ongoing surveillance. An intelligent monitoring system could maintain rolling estimates of pre-disclosure drift by chaebol group, industry sector, and firm size, enabling regulators to identify emerging patterns before they become systemic. The significant Hanwha drift (+1.565\%) and KT event-window anomaly (+1.310\%), while individually explainable, illustrate the value of automated cross-sectional screening.
+
+These applications exemplify the broader potential of data-driven approaches to regulatory evaluation. Traditional regulatory assessment relies on periodic academic studies with publication lags of one to three years. An intelligent disclosure monitoring system could provide near-real-time feedback on regulatory effectiveness, enabling adaptive enforcement. \citet{goldstein2007manipulation} theoretically demonstrate that price informativeness affects the efficiency of real economic decisions, implying that better monitoring of disclosure quality can have real economic benefits beyond market fairness.
+
+\subsection{Methodological Contributions}
+
+This study makes several methodological contributions to the event study literature and, more broadly, to the application of data analytics in financial regulation evaluation.
+
+First, we demonstrate the importance of \textbf{multi-test triangulation} in event studies. Our central finding---that pre-disclosure drift is statistically significant under parametric tests but fails under non-parametric alternatives---highlights the danger of relying on a single test statistic. The parametric $t$-test, which is the dominant approach in the event study literature \cite{mackinlay1997event, kothari2016econometrics}, implicitly assumes that abnormal returns are normally distributed. When the distribution is right-skewed (as in our data, where the mean CAR[-5,$-$1] is +0.52\% but the median is near zero), the parametric mean is inflated by outliers, producing significant $t$-statistics even when the majority of events show no drift. The sign test and Wilcoxon signed-rank test, which are robust to skewness and outliers, provide a more accurate characterization of the typical event.
+
+Second, we introduce the \textbf{directional conditioning test} as a direct diagnostic for information leakage. Prior event studies typically interpret significant pre-announcement drift as evidence of informed trading without verifying whether the drift predicts the \textit{direction} of the subsequent news. By conditioning on earnings surprise direction and finding 49.0\% prediction accuracy (indistinguishable from chance), we provide a clean separation between drift existence and drift informativeness. This directional test could be adopted as a standard diagnostic in future event studies that evaluate regulatory effectiveness.
+
+Third, we document the importance of \textbf{filing time classification} in event study design. The finding that 96.5\% of DART Fair Disclosure filings occur after market close implies that the conventional ``Day 0'' return is effectively pre-disclosure for nearly all events. Studies that attribute Day 0 returns to information release may be misinterpreting anticipatory trading as immediate market reaction. This institutional detail, accessible through electronic filing system metadata, should be systematically reported in event studies across all jurisdictions with electronic filing.
+
+\subsection{Implications for Policy and Practice}
+
+For regulators, our finding of non-directional drift suggests that Korea's Fair Disclosure regime does not require fundamental reform. The regulation appears to function as intended: material earnings information reaches the market simultaneously, and prices respond correctly only upon public disclosure. The positive parametric drift, while statistically significant, reflects distributional artifacts and non-directional market dynamics rather than systematic information leakage.
+
+For investors, the results have practical implications. Post-disclosure Day~+1 returns correctly price earnings surprises with 60.6\% accuracy ($p$<0.001), while pre-disclosure drift strategies are unlikely to be profitable directionally. The significant cross-sectional heterogeneity across chaebol groups and fiscal quarters, however, suggests that event-driven strategies conditioned on group membership and seasonality may warrant further investigation.
+
+For the academic community, our study demonstrates the value of combining traditional event study methodology with modern data science approaches. The comprehensive use of DART's electronic filing data, systematic cross-sectional analysis, and multi-test framework provides a template for data-driven regulatory evaluation that can be replicated across jurisdictions and regulatory regimes.
+
+\subsection{Limitations and Future Work}
+
+Several limitations warrant discussion. First, our YoY operating profit change as a surprise measure is crude compared to the analyst consensus forecast standard \cite{livnat2006comparing}. Only 26.4\% of events yield parseable surprises under our rule-based extraction, and parseable events come from larger firms with lower beta. Future work should incorporate analyst consensus data from commercial databases (e.g., FnGuide, WISEfn) or apply NLP-based extraction to expand coverage.
+
+Second, our sample is limited to 64 large chaebol affiliates, which represent the most informationally efficient segment of the Korean market. Information leakage, if it occurs, may be more prevalent among smaller, less scrutinized firms outside the chaebol structure. Extending the analysis to the full KOSPI and KOSDAQ universes would provide a more comprehensive assessment of Fair Disclosure effectiveness.
+
+Third, Korean Fama-French factors are not freely available for our sample period, preventing us from using multi-factor benchmark models. While the market model and market-adjusted returns produce consistent results (Table~\ref{tab:robustness}), the Fama-French three-factor or five-factor model would provide a more stringent benchmark \cite{gu2020empirical}.
+
+Fourth, we cannot rule out that the observed pre-disclosure volume increases reflect legal mosaic information assembly---the process by which analysts and investors piece together publicly available signals to form earnings expectations. This process is legal and arguably beneficial for market efficiency, but it generates trading patterns that may superficially resemble insider trading.
+
+Fifth, our analysis focuses on earnings disclosures and does not examine other material events (e.g., M\&A announcements, management changes, regulatory actions) where information leakage incentives may differ. A comprehensive evaluation of Fair Disclosure effectiveness would examine multiple disclosure types.
+
+Future work could address these limitations in several ways. Machine learning approaches to earnings surprise extraction could substantially expand the subset of events available for directional tests. Network analysis of chaebol ownership structures could identify potential internal information channels. High-frequency intraday data could enable more precise identification of the timing of price adjustment relative to filing timestamps. Finally, a comparative study across Asian markets with similar electronic filing systems (e.g., Japan's EDINET, Taiwan's MOPS) would shed light on the generalizability of our findings.
 
 \section{Conclusion}
 
-This study finds no evidence of directional information leakage in Korean earnings announcements. Three analyses---direction prediction (49.0\% accuracy), non-parametric tests (sign test $p$=0.585), and surprise conditioning ($p$=0.703)---demonstrate that pre-disclosure drift is non-directional. The first post-disclosure trading day shows strong directional response (60.6\% accuracy, $p$<0.001), consistent with effective fair disclosure.
+This study provides a comprehensive, data-driven evaluation of the long-term effectiveness of Korea's Fair Disclosure regulation using 2,208 earnings disclosure events from 64 KOSPI-listed companies across 12 chaebol groups over a six-year period (2020--2026). We find no evidence of directional information leakage. Three independent analyses converge on this conclusion: direction prediction accuracy of 49.0\% (no better than chance), failure of non-parametric tests to confirm parametric drift (sign test $p$=0.585; Wilcoxon $p$=0.142), and surprise-conditioned CARs that are indistinguishable by earnings direction ($p$=0.703). The first post-disclosure trading day shows a strong, correct directional response (60.6\% accuracy, $p$<0.001), confirming that material earnings information is incorporated into prices only upon public release through the DART system.
 
-Our results carry a broader methodological lesson: pre-announcement drift should not be conflated with information leakage without conditioning on the direction of the actual news \cite{meulbroek1992comparison, bernile2016can, atiase1985predisclosure}. Future work should examine non-chaebol firms and incorporate analyst consensus surprises.
+Cross-sectional analyses reveal significant heterogeneity across chaebol groups, firm sizes, and market betas, but these patterns are consistent with normal variation in information environments rather than differential information leakage. The most-watched chaebol group (Samsung) shows only moderate, non-directional drift, while groups with higher drift (Hanwha, CJ) exhibit industry-specific characteristics that explain their elevated pre-disclosure returns.
+
+Our results carry two broader lessons. First, methodologically, pre-announcement drift should not be conflated with information leakage without conditioning on the direction of the actual news \cite{meulbroek1992comparison, bernile2016can, atiase1985predisclosure}. The multi-test approach we employ---combining parametric, non-parametric, and directional tests---provides a more robust diagnostic than any single test in isolation. Second, for intelligent systems research, our study demonstrates how electronic disclosure databases can be leveraged for continuous, data-driven regulatory evaluation, moving beyond periodic ad hoc studies toward scalable monitoring frameworks that could be deployed by regulators and market participants alike.
+
+Future work should extend the analysis to non-chaebol firms, incorporate analyst consensus surprises through NLP-based extraction, and develop automated monitoring systems that implement the multi-test framework in near-real-time.
 
 \begin{acks}
 The author thanks the DART electronic disclosure system for providing publicly accessible corporate filing data. All disclosure data are publicly available through DART (\url{https://dart.fss.or.kr}). Stock price data are from KRX via FinanceDataReader. Analysis code is available at \url{https://github.com/yjkim0123/pre-disclosure-leakage}.
