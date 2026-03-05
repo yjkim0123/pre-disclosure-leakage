@@ -1,0 +1,1 @@
+The author thanks the DART electronic disclosure system for providing publicly accessible corporate filing data. All disclosure data are publicly available through DART (\url{https://dart.fss.or.kr}). Stock price data are from KRX via FinanceDataReader. Analysis code is available at \url{https://github.com/yjkim0123/pre-disclosure-leakage}.
