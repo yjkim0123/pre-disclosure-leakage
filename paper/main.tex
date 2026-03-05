@@ -16,10 +16,10 @@
 
 \begin{frontmatter}
 
-\title{Does Fair Disclosure Work? Evidence from Pre- and Post-Disclosure\\Market Reactions to Korean Earnings Announcements}
+\title{Non-Directional Pre-Disclosure Drift Under Fair Disclosure: Evidence from Korean Earnings Announcements}
 
 \author{Yongjun Kim}
-\affiliation[ajou]{organization={College of Software Convergence, Ajou University},
+\affiliation{organization={Department of Software, Ajou University},
   city={Suwon},
   country={South Korea}}
 \ead{yjkim0123@ajou.ac.kr}
@@ -53,9 +53,9 @@ We make four contributions. First, we provide the first long-term assessment of 
 
 \subsection{Fair Disclosure Regulation}
 
-Fair disclosure regulation addresses selective disclosure, whereby corporate insiders share material information with favored market participants before public release \citep{heflin2003regulation}. In the U.S., Regulation Fair Disclosure (Reg FD), implemented in 2000, produced mixed evidence: \citet{ahmed2003impact} find reduced information asymmetry, while \citet{heflin2003regulation} document reduced information quality.
+Fair disclosure regulation addresses selective disclosure, whereby corporate insiders share material information with favored market participants before public release \citep{heflin2003regulation}. In the U.S., Regulation Fair Disclosure (Reg FD), implemented in 2000, produced mixed evidence: \citet{ahmed2003impact} find reduced information asymmetry, while \citet{heflin2003regulation} document reduced information quality. \citet{bailey2003regulation} provide comprehensive evidence on market, analyst, and corporate responses to Reg FD, and \citet{eleswarapu2004impact} document reduced information asymmetry and trading costs following implementation. \citet{gomes2007sec} further show that Reg FD affected the cost of capital, particularly for smaller firms.
 
-In Korea, \citet{yun2012fair} examined the effect of fair disclosure regulation on the timeliness and informativeness of earnings announcements, while \citet{park2020disclosure} investigated how disclosure frequency under the regulation affects the information environment and cost of capital. More recently, \citet{shin2023korea} studied the effects of Korea's compulsory preliminary earnings announcements on stock prices. However, these studies do not examine whether pre-disclosure price movements are directionally informative with respect to the actual earnings news---the central question of our study.
+In Korea, \citet{yun2012fair} examined the effect of fair disclosure regulation on the timeliness and informativeness of earnings announcements, while \citet{park2020disclosure} investigated how disclosure frequency under the regulation affects the information environment and cost of capital. \citet{yoon2011impact} provide early evidence on the impact of fair disclosure on the Korean stock market, and \citet{lee2012testing} test regulatory effectiveness using Korean data in an emerging market context. More recently, \citet{shin2023korea} studied the effects of Korea's compulsory preliminary earnings announcements on stock prices. However, these studies do not examine whether pre-disclosure price movements are directionally informative with respect to the actual earnings news---the central question of our study.
 
 \subsection{Pre-Announcement Drift and Its Interpretation}
 
@@ -73,14 +73,14 @@ The timing of information release within the trading day affects how markets pro
 
 \subsection{Korean Market Context}
 
-The Korean stock market features concentrated chaebol ownership, a mandatory electronic disclosure system (DART), significant retail investor participation, and relatively strict insider trading regulations \citep{lee2019regulation}. \citet{kim2002market} show that market liquidity and volume patterns around earnings announcements are informative about the information environment. These institutional features, combined with the comprehensive DART database, make Korea an ideal setting for testing fair disclosure effectiveness.
+The Korean stock market features concentrated chaebol ownership, a mandatory electronic disclosure system (DART), significant retail investor participation, and relatively strict insider trading regulations \citep{lee2019regulation}. \citet{kim2002market} show that market liquidity and volume patterns around earnings announcements are informative about the information environment. \citet{beny2005impact} demonstrates that stronger insider trading enforcement is associated with more efficient stock prices across countries, providing cross-country evidence relevant to our Korean setting. These institutional features, combined with the comprehensive DART database, make Korea an ideal setting for testing fair disclosure effectiveness.
 
 \section{Data and Methodology}
 \label{sec:data}
 
 \subsection{Data Sources}
 
-We collect all \begin{CJK}{UTF8}{mj}영업실적 공정공시\end{CJK} (Fair Disclosure of Operating Results) filings from DART between January 2020 and March 2026 using the OpenDartReader API. We focus on original filings, excluding corrections (\begin{CJK}{UTF8}{mj}기재정정\end{CJK}). Our sample comprises 2,221 disclosures from 64 companies across 12 chaebol groups: Samsung (12), Hyundai Motor (8), LG (8), SK (7), HD Hyundai (5), Hanwha (5), POSCO (4), Lotte (4), Doosan (4), CJ (3), KT (2), and GS (2). Daily stock price and volume data are obtained from FinanceDataReader.
+We collect all Fair Disclosure of Operating Results (\textit{yeong-eop-siljeok gongjeong-gongsi}) filings from DART between January 2020 and March 2026 using the OpenDartReader API. We focus on original filings, excluding corrections (\textit{gijae-jeongjeong}). Our sample comprises 2,221 disclosures from 64 companies across 12 chaebol groups: Samsung (12), Hyundai Motor (8), LG (8), SK (7), HD Hyundai (5), Hanwha (5), POSCO (4), Lotte (4), Doosan (4), CJ (3), KT (2), and GS (2). Daily stock price and volume data are obtained from FinanceDataReader.
 
 \subsection{Filing Time Classification}
 
@@ -114,6 +114,8 @@ where $R_{m,t}$ is the KOSPI index return. We require a minimum of 60 trading da
 \subsection{Earnings Surprise Measure}
 
 We extract year-over-year (YoY) operating profit changes from the disclosure texts. Events where YoY operating profit increases are classified as positive surprises; decreases as negative surprises. Of the 2,208 events with valid market model estimates, 584 have parseable earnings surprise data: 358 positive and 226 negative surprises.
+
+We acknowledge that the standard measure in earnings announcement studies is the analyst consensus forecast surprise \citep{livnat2006comparing}. However, comprehensive individual-firm-level analyst consensus data for Korean KOSPI-listed companies are not freely available for our full sample period (2020--2026), and commercial databases (e.g., FnGuide, WISEfn) require institutional subscriptions. The YoY operating profit change, while crude, captures the directional content of the earnings news and provides a conservative test: if pre-disclosure drift reflected information leakage, it should predict at least the direction of the YoY change, which it does not.
 
 \subsection{Abnormal Volume}
 
@@ -172,6 +174,8 @@ $-$1 & 0.256 & 4.57 & $<$0.001 & 50.1 & 0.909 & 0.089 & $<$0.001 \\
 \end{table}
 
 Table~\ref{tab:car} confirms this pattern at the cumulative level. While the parametric CAR[-5,$-$1] is +0.519\% ($t$=4.65, $p$<0.001), the sign test shows only 49.4\% of events have positive pre-disclosure CARs ($p$=0.585), and the Wilcoxon signed-rank test is insignificant ($p$=0.142). The pre-disclosure drift is driven by a subset of events with large positive returns, not a systematic directional pattern.
+
+Notably, the CAR[0,+1] window shows a significantly negative sign test result: only 47.0\% of events have positive CARs ($p$=0.003), with the Wilcoxon test also significant ($p$=0.019). This indicates that a majority of individual events experience negative post-disclosure returns, even though the parametric mean is near zero ($-$0.042\%, $p$=0.700). This asymmetry---a few large positive reactions offset by many small negative ones---is consistent with the well-documented negativity bias in earnings reactions \citep{skinner1994investment}, where markets respond more strongly to bad news than to good news.
 
 \begin{table}[H]
 \centering
@@ -335,7 +339,15 @@ A natural concern is that significant pre-disclosure abnormal returns indicate i
 \item \textbf{Surprise conditioning}: Pre-disclosure CARs are statistically identical for positive and negative surprises ($p$=0.703).
 \end{enumerate}
 
-The pre-disclosure drift observed in parametric tests appears driven by a small number of events with large positive abnormal returns, possibly reflecting: (1) company-specific news unrelated to earnings (e.g., M\&A rumors, analyst upgrades), (2) general market momentum affecting the cross-section asymmetrically, or (3) anticipatory trading based on publicly available signals that does not carry directional information about the specific earnings outcome.
+The pre-disclosure drift observed in parametric tests appears driven by a small number of events with large positive abnormal returns, possibly reflecting: (1) company-specific news unrelated to earnings (e.g., M\&A rumors, analyst upgrades), (2) general market momentum affecting the cross-section asymmetrically, or (3) anticipatory trading based on publicly available signals that does not carry directional information about the specific earnings outcome. This interpretation is consistent with \citet{hirshleifer2003limited}, who argue that limited investor attention can produce predictable patterns in stock returns around information events without implying illegal information access. The positive skewness of the drift distribution---mean positive but median near zero---further supports an outlier-driven rather than systematic explanation.
+
+\subsection{Comparison with International Evidence}
+
+Our findings align with the broader international evidence on fair disclosure regulation. \citet{bailey2003regulation} find that Reg FD in the U.S.\ reduced selective disclosure without significantly harming market quality. \citet{eleswarapu2004impact} document reduced information asymmetry post-Reg FD, consistent with our finding that Korea's analogous regulation prevents directional leakage. However, our contribution is distinct: while prior studies primarily compare pre- and post-regulation periods, we test whether the regulation continues to be effective \textit{within} the regulated regime by examining the directional content of pre-disclosure drift.
+
+\subsection{Implications for Investors and Regulators}
+
+Our results carry practical implications. For regulators, the finding that pre-disclosure drift is non-directional suggests that Korea's Fair Disclosure regime does not require fundamental reform, though the observed volume increases warrant monitoring. For investors, the evidence that post-disclosure Day~+1 returns correctly price earnings surprises with 60.6\% accuracy suggests that trading strategies based on disclosed earnings information remain viable, while strategies based on pre-disclosure drift are unlikely to be profitable on a directional basis.
 
 \subsection{Evidence Consistent with Fair Disclosure Effectiveness}
 

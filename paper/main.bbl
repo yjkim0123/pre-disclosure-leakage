@@ -1,4 +1,4 @@
-\begin{thebibliography}{21}
+\begin{thebibliography}{30}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \providecommand{\url}[1]{\texttt{#1}}
 \providecommand{\href}[2]{#2}
@@ -27,6 +27,14 @@
 \newblock \bibinfo{journal}{Journal of Accounting Research}
   \bibinfo{volume}{23}, \bibinfo{pages}{21--36}.
 %Type = Article
+\bibitem[{Bailey et~al.(2003)Bailey, Li, Mao and Zhong}]{bailey2003regulation}
+\bibinfo{author}{Bailey, W.}, \bibinfo{author}{Li, H.}, \bibinfo{author}{Mao,
+  C.X.}, \bibinfo{author}{Zhong, R.}, \bibinfo{year}{2003}.
+\newblock \bibinfo{title}{{Regulation Fair Disclosure} and earnings
+  information: Market, analyst, and corporate responses}.
+\newblock \bibinfo{journal}{The Journal of Finance} \bibinfo{volume}{58},
+  \bibinfo{pages}{2487--2514}.
+%Type = Article
 \bibitem[{Bamber et~al.(1997)Bamber, Barron and Stober}]{bamber1997trading}
 \bibinfo{author}{Bamber, L.S.}, \bibinfo{author}{Barron, O.E.},
   \bibinfo{author}{Stober, T.L.}, \bibinfo{year}{1997}.
@@ -34,6 +42,13 @@
   coincident with earnings announcements}.
 \newblock \bibinfo{journal}{The Accounting Review} \bibinfo{volume}{72},
   \bibinfo{pages}{575--597}.
+%Type = Article
+\bibitem[{Beny(2005)}]{beny2005impact}
+\bibinfo{author}{Beny, L.N.}, \bibinfo{year}{2005}.
+\newblock \bibinfo{title}{Do insider trading laws matter? some preliminary
+  comparative evidence}.
+\newblock \bibinfo{journal}{American Law and Economics Review}
+  \bibinfo{volume}{7}, \bibinfo{pages}{144--183}.
 %Type = Article
 \bibitem[{Berkman et~al.(2009)Berkman, Dimitrov, Jain, Koch and
   Tice}]{berkman2009sell}
@@ -84,6 +99,23 @@
 \newblock \bibinfo{journal}{The Journal of Finance} \bibinfo{volume}{60},
   \bibinfo{pages}{413--442}.
 %Type = Article
+\bibitem[{Eleswarapu et~al.(2004)Eleswarapu, Thompson and
+  Venkataraman}]{eleswarapu2004impact}
+\bibinfo{author}{Eleswarapu, V.R.}, \bibinfo{author}{Thompson, R.},
+  \bibinfo{author}{Venkataraman, K.}, \bibinfo{year}{2004}.
+\newblock \bibinfo{title}{The impact of {Regulation Fair Disclosure}: Trading
+  costs and information asymmetry}.
+\newblock \bibinfo{journal}{Journal of Financial and Quantitative Analysis}
+  \bibinfo{volume}{39}, \bibinfo{pages}{209--225}.
+%Type = Article
+\bibitem[{Gomes et~al.(2007)Gomes, Gorton and Madureira}]{gomes2007sec}
+\bibinfo{author}{Gomes, A.}, \bibinfo{author}{Gorton, G.},
+  \bibinfo{author}{Madureira, L.}, \bibinfo{year}{2007}.
+\newblock \bibinfo{title}{{SEC Regulation Fair Disclosure}, information, and
+  the cost of capital}.
+\newblock \bibinfo{journal}{Journal of Corporate Finance} \bibinfo{volume}{13},
+  \bibinfo{pages}{300--334}.
+%Type = Article
 \bibitem[{Heflin et~al.(2003)Heflin, Subramanyam and
   Zhang}]{heflin2003regulation}
 \bibinfo{author}{Heflin, F.}, \bibinfo{author}{Subramanyam, K.},
@@ -92,6 +124,14 @@
   analysts' forecasts}.
 \newblock \bibinfo{journal}{Journal of Accounting and Economics}
   \bibinfo{volume}{35}, \bibinfo{pages}{61--89}.
+%Type = Article
+\bibitem[{Hirshleifer and Teoh(2003)}]{hirshleifer2003limited}
+\bibinfo{author}{Hirshleifer, D.}, \bibinfo{author}{Teoh, S.H.},
+  \bibinfo{year}{2003}.
+\newblock \bibinfo{title}{Limited attention, information disclosure, and
+  financial reporting}.
+\newblock \bibinfo{journal}{Journal of Accounting and Economics}
+  \bibinfo{volume}{36}, \bibinfo{pages}{337--386}.
 %Type = Article
 \bibitem[{Kaniel et~al.(2012)Kaniel, Liu, Saar and
   Titman}]{kaniel2012individual}
@@ -133,6 +173,22 @@
   \bibinfo{volume}{6}, \bibinfo{pages}{281--288}.
 \newblock \DOIprefix\doi{10.13106/jafeb.2019.vol6.no1.281}.
 %Type = Article
+\bibitem[{Lee and Park(2012)}]{lee2012testing}
+\bibinfo{author}{Lee, J.Y.}, \bibinfo{author}{Park, K.S.},
+  \bibinfo{year}{2012}.
+\newblock \bibinfo{title}{Testing the effectiveness of {Regulation Fair
+  Disclosure}: Evidence from an emerging market}.
+\newblock \bibinfo{journal}{Asia-Pacific Journal of Financial Studies}
+  \bibinfo{volume}{41}, \bibinfo{pages}{85--114}.
+%Type = Article
+\bibitem[{Livnat and Mendenhall(2006)}]{livnat2006comparing}
+\bibinfo{author}{Livnat, J.}, \bibinfo{author}{Mendenhall, R.R.},
+  \bibinfo{year}{2006}.
+\newblock \bibinfo{title}{Comparing the post-earnings announcement drift for
+  surprises calculated from analyst and time series forecasts}.
+\newblock \bibinfo{journal}{Journal of Accounting Research}
+  \bibinfo{volume}{44}, \bibinfo{pages}{177--205}.
+%Type = Article
 \bibitem[{MacKinlay(1997)}]{mackinlay1997event}
 \bibinfo{author}{MacKinlay, A.C.}, \bibinfo{year}{1997}.
 \newblock \bibinfo{title}{Event studies in economics and finance}.
@@ -170,6 +226,20 @@
 \newblock \bibinfo{journal}{Journal of Risk and Financial Management}
   \bibinfo{volume}{16}, \bibinfo{pages}{504}.
 \newblock \DOIprefix\doi{10.3390/jrfm16120504}.
+%Type = Article
+\bibitem[{Skinner(1994)}]{skinner1994investment}
+\bibinfo{author}{Skinner, D.J.}, \bibinfo{year}{1994}.
+\newblock \bibinfo{title}{Why firms voluntarily disclose bad news}.
+\newblock \bibinfo{journal}{Journal of Accounting Research}
+  \bibinfo{volume}{32}, \bibinfo{pages}{38--60}.
+%Type = Article
+\bibitem[{Yoon et~al.(2011)Yoon, Kim and Ra}]{yoon2011impact}
+\bibinfo{author}{Yoon, B.}, \bibinfo{author}{Kim, J.B.}, \bibinfo{author}{Ra,
+  Y.S.}, \bibinfo{year}{2011}.
+\newblock \bibinfo{title}{The impact of fair disclosure on the {Korean} stock
+  market}.
+\newblock \bibinfo{journal}{Asia-Pacific Journal of Financial Studies}
+  \bibinfo{volume}{40}, \bibinfo{pages}{31--62}.
 %Type = Article
 \bibitem[{Yun and Kim(2012)}]{yun2012fair}
 \bibinfo{author}{Yun, J.R.}, \bibinfo{author}{Kim, K.H.}, \bibinfo{year}{2012}.

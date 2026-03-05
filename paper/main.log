@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2026.2.5)  5 MAR 2026 00:32
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2026.2.5)  5 MAR 2026 12:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -623,30 +623,13 @@ al/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}]
 
 [3]
 
-[4] (/usr/local/texlive/2025/texmf-dist/tex/latex/cjk/texinput/UTF8/UTF8.bdg
-File: UTF8.bdg 2021/10/16 4.8.5
-)
-(/usr/local/texlive/2025/texmf-dist/tex/latex/cjk/texinput/UTF8/UTF8.enc
-File: UTF8.enc 2021/10/16 4.8.5
-)
-(/usr/local/texlive/2025/texmf-dist/tex/latex/cjk/texinput/UTF8/UTF8.chr
-File: UTF8.chr 2021/10/16 4.8.5
-)
-LaTeX Font Info:    Trying to load font information for C70+mj on input line 83
-.
+[4]
+Overfull \hbox (10.68326pt too wide) in paragraph at lines 83--84
+[]\T1/cmr/m/n/10 We col-lect all Fair Dis-clo-sure of Op-er-at-ing Re-sults (\T
+1/cmr/m/it/10 yeong-eop-siljeok gongjeong-
+ []
 
-(/usr/local/texlive/2025/texmf-dist/tex/latex/cjk/texinput/UTF8/c70mj.fd
-File: c70mj.fd 2021/10/16 4.8.5
-)
-(/usr/local/texlive/2025/texmf-dist/tex/latex/cjk/texinput/UTF8/c70mj.fdx
-File: c70mj.fdx 2021/10/16 4.8.5
-)
-(/usr/local/texlive/2025/texmf-dist/tex/latex/cjk/texinput/UTF8/UTF8.enc
-File: UTF8.enc 2021/10/16 4.8.5
-)
-(/usr/local/texlive/2025/texmf-dist/tex/latex/cjk/texinput/UTF8/UTF8.chr
-File: UTF8.chr 2021/10/16 4.8.5
-)
+
 
 [5]
 
@@ -656,7 +639,7 @@ File: UTF8.chr 2021/10/16 4.8.5
 }]
 
 [8]
-Overfull \hbox (31.82364pt too wide) in paragraph at lines 202--221
+Overfull \hbox (31.82364pt too wide) in paragraph at lines 206--225
  [] 
  []
 
@@ -665,15 +648,15 @@ Overfull \hbox (31.82364pt too wide) in paragraph at lines 202--221
 [9]
 
 [10]
-<figures/fig2_volume.pdf, id=282, 505.21278pt x 315.28542pt>
-File: figures/fig2_volume.pdf Graphic file (type pdf)
-<use figures/fig2_volume.pdf>
-Package pdftex.def Info: figures/fig2_volume.pdf  used on input line 282.
-(pdftex.def)             Requested size: 293.2521pt x 183.0148pt.
-
 
 [11]
-Overfull \hbox (11.71844pt too wide) in paragraph at lines 289--290
+<figures/fig2_volume.pdf, id=308, 505.21278pt x 315.28542pt>
+File: figures/fig2_volume.pdf Graphic file (type pdf)
+<use figures/fig2_volume.pdf>
+Package pdftex.def Info: figures/fig2_volume.pdf  used on input line 286.
+(pdftex.def)             Requested size: 293.2521pt x 183.0148pt.
+
+Overfull \hbox (11.71844pt too wide) in paragraph at lines 293--294
 \T1/cmr/m/n/10 Pre-disclosure drift re-mains sig-nif-i-cant un-der firm-cluster
 ed stan-dard er-rors (CAR[-
  []
@@ -681,41 +664,45 @@ ed stan-dard er-rors (CAR[-
 
 
 [12 <./figures/fig2_volume.pdf>]
-<figures/fig3_year.pdf, id=342, 496.22952pt x 315.40712pt>
-File: figures/fig3_year.pdf Graphic file (type pdf)
-<use figures/fig3_year.pdf>
-Package pdftex.def Info: figures/fig3_year.pdf  used on input line 320.
-(pdftex.def)             Requested size: 293.2521pt x 186.39659pt.
-
 
 [13]
+<figures/fig3_year.pdf, id=368, 496.22952pt x 315.40712pt>
+File: figures/fig3_year.pdf Graphic file (type pdf)
+<use figures/fig3_year.pdf>
+Package pdftex.def Info: figures/fig3_year.pdf  used on input line 324.
+(pdftex.def)             Requested size: 293.2521pt x 186.39659pt.
+
 
 [14 <./figures/fig3_year.pdf>]
 
 [15]
 
-[16] (./main.bbl
+[16]
 
-[17]
+[17] (./main.bbl
 
-[18])
+[18]
 
-[19] (./main.aux)
+[19]
+
+[20])
+
+[21] (./main.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: B8C10C1FC0C60482D96EBE8EF5FB4BAC;5691.
+(rerunfilecheck)             Checksum: 60DBAEBA5AFE5A66772C23A15D8531E2;6223.
  ) 
 Here is how much of TeX's memory you used:
- 14248 strings out of 473190
- 218213 string characters out of 5715801
- 629352 words of memory out of 5000000
- 37169 multiletter control sequences out of 15000+600000
- 579893 words of font info for 94 fonts, out of 8000000 for 9000
+ 14079 strings out of 473190
+ 216022 string characters out of 5715801
+ 627752 words of memory out of 5000000
+ 37035 multiletter control sequences out of 15000+600000
+ 572884 words of font info for 74 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,11n,79p,1387b,754s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,11n,79p,1387b,677s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
 ></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb>
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></
@@ -730,18 +717,14 @@ ive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb></usr/local/texliv
 e/2025/texmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb></usr/local/texlive/
 2025/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/20
 25/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2025
-/texmf-dist/fonts/type1/public/cm-super/sfti0600.pfb></usr/local/texlive/2025/t
-exmf-dist/fonts/type1/public/cm-super/sfti0800.pfb></usr/local/texlive/2025/tex
-mf-dist/fonts/type1/public/cm-super/sfti1000.pfb></usr/local/texlive/2025/texmf
--dist/fonts/type1/public/cm-super/sftt0800.pfb></usr/local/texlive/2025/texmf-d
-ist/fonts/type1/public/cm-super/sftt1000.pfb></usr/local/texlive/2025/texmf-dis
-t/fonts/type1/uhc/umj/umj10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1
-/uhc/umj/umj12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/uhc/umj/umj1
-3.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/uhc/umj/umj14.pfb>
-Output written on main.pdf (19 pages, 404742 bytes).
+/texmf-dist/fonts/type1/public/cm-super/sfti0800.pfb></usr/local/texlive/2025/t
+exmf-dist/fonts/type1/public/cm-super/sfti1000.pfb></usr/local/texlive/2025/tex
+mf-dist/fonts/type1/public/cm-super/sftt0800.pfb></usr/local/texlive/2025/texmf
+-dist/fonts/type1/public/cm-super/sftt1000.pfb>
+Output written on main.pdf (21 pages, 390125 bytes).
 PDF statistics:
- 565 PDF objects out of 1000 (max. 8388607)
- 396 compressed objects within 4 object streams
- 91 named destinations out of 1000 (max. 500000)
- 263 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 584 PDF objects out of 1000 (max. 8388607)
+ 429 compressed objects within 5 object streams
+ 103 named destinations out of 1000 (max. 500000)
+ 251 words of extra memory for PDF output out of 10000 (max. 10000000)
 
